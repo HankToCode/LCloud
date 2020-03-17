@@ -1,4 +1,4 @@
-package com.hazz.kotlinmvp
+package com.lt.ltotc
 
 import org.junit.Test
 
