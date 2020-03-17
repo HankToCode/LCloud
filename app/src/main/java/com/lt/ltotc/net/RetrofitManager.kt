@@ -1,11 +1,11 @@
 package com.lt.ltotc.net
 
-import com.lt.ltotc.MyApplication
+import com.lt.basics.MyApplication
+import com.lt.basics.utils.AppUtils
+import com.lt.basics.utils.NetworkUtil
+import com.lt.basics.utils.Preference
 import com.lt.ltotc.api.ApiService
 import com.lt.ltotc.api.UrlConstant
-import com.lt.ltotc.utils.AppUtils
-import com.lt.ltotc.utils.NetworkUtil
-import com.lt.ltotc.utils.Preference
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

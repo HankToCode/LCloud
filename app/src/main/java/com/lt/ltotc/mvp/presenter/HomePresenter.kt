@@ -1,10 +1,10 @@
 package com.lt.ltotc.mvp.presenter
 
-import com.lt.ltotc.base.BasePresenter
+import com.lt.basics.base.BasePresenter
 import com.lt.ltotc.mvp.contract.HomeContract
 import com.lt.ltotc.mvp.model.HomeModel
 import com.lt.ltotc.mvp.model.bean.HomeBean
-import com.lt.ltotc.net.exception.ExceptionHandle
+import com.lt.basics.net.exception.ExceptionHandle
 
 /**
  * Created by HankGreen on 2017/11/8.

@@ -14,18 +14,18 @@ import android.view.animation.AnimationUtils
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import com.google.android.flexbox.*
-import com.lt.ltotc.MyApplication
+import com.lt.basics.MyApplication
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseActivity
+import com.lt.basics.base.BaseActivity
 import com.lt.ltotc.mvp.contract.SearchContract
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.SearchPresenter
-import com.lt.ltotc.net.exception.ErrorStatus
-import com.lt.ltotc.showToast
+import com.lt.basics.net.exception.ErrorStatus
+import com.lt.basics.showToast
 import com.lt.ltotc.ui.adapter.CategoryDetailAdapter
 import com.lt.ltotc.ui.adapter.HotKeywordsAdapter
-import com.lt.ltotc.utils.CleanLeakUtils
-import com.lt.ltotc.utils.StatusBarUtil
+import com.lt.basics.utils.CleanLeakUtils
+import com.lt.basics.utils.StatusBarUtil
 import com.lt.ltotc.view.ViewAnimUtils
 import kotlinx.android.synthetic.main.activity_search.*
 

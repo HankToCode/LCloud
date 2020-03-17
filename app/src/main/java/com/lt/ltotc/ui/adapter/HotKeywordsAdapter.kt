@@ -5,8 +5,8 @@ import android.view.View
 import android.widget.TextView
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.lt.ltotc.R
-import com.lt.ltotc.view.recyclerview.ViewHolder
-import com.lt.ltotc.view.recyclerview.adapter.CommonAdapter
+import com.lt.basics.view.recyclerview.ViewHolder
+import com.lt.basics.view.recyclerview.adapter.CommonAdapter
 
 /**
  * Created by HankGreen on 2017/12/4.

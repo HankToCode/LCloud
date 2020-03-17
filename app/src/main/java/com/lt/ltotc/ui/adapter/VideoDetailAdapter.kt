@@ -6,15 +6,15 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import com.lt.ltotc.MyApplication
+import com.lt.basics.MyApplication
 import com.lt.ltotc.R
-import com.lt.ltotc.durationFormat
-import com.lt.ltotc.glide.GlideApp
-import com.lt.ltotc.glide.GlideRoundTransform
+import com.lt.basics.durationFormat
+import com.lt.basics.glide.GlideApp
+import com.lt.basics.glide.GlideRoundTransform
 import com.lt.ltotc.mvp.model.bean.HomeBean
-import com.lt.ltotc.view.recyclerview.MultipleType
-import com.lt.ltotc.view.recyclerview.ViewHolder
-import com.lt.ltotc.view.recyclerview.adapter.CommonAdapter
+import com.lt.basics.view.recyclerview.MultipleType
+import com.lt.basics.view.recyclerview.ViewHolder
+import com.lt.basics.view.recyclerview.adapter.CommonAdapter
 
 /**
  * Created by HankGreen on 2017/11/25.

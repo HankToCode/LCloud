@@ -4,16 +4,16 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import com.lt.ltotc.Constants
+import com.lt.basics.Constants
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseActivity
-import com.lt.ltotc.glide.GlideApp
+import com.lt.basics.base.BaseActivity
+import com.lt.basics.glide.GlideApp
 import com.lt.ltotc.mvp.contract.CategoryDetailContract
 import com.lt.ltotc.mvp.model.bean.CategoryBean
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.CategoryDetailPresenter
 import com.lt.ltotc.ui.adapter.CategoryDetailAdapter
-import com.lt.ltotc.utils.StatusBarUtil
+import com.lt.basics.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_category_detail.*
 
 /**

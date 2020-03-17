@@ -1,9 +1,9 @@
 package com.lt.ltotc.mvp.presenter
 
-import com.lt.ltotc.base.BasePresenter
+import com.lt.basics.base.BasePresenter
 import com.lt.ltotc.mvp.contract.RankContract
 import com.lt.ltotc.mvp.model.RankModel
-import com.lt.ltotc.net.exception.ExceptionHandle
+import com.lt.basics.net.exception.ExceptionHandle
 
 /**
  * Created by HankGreen on 2017/11/30.

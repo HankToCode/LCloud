@@ -3,14 +3,14 @@ package com.lt.ltotc.ui.fragment
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseFragment
-import com.lt.ltotc.base.BaseFragmentAdapter
+import com.lt.basics.base.BaseFragment
+import com.lt.basics.base.BaseFragmentAdapter
 import com.lt.ltotc.mvp.contract.HotTabContract
 import com.lt.ltotc.mvp.model.bean.TabInfoBean
 import com.lt.ltotc.mvp.presenter.HotTabPresenter
-import com.lt.ltotc.net.exception.ErrorStatus
-import com.lt.ltotc.showToast
-import com.lt.ltotc.utils.StatusBarUtil
+import com.lt.basics.net.exception.ErrorStatus
+import com.lt.basics.showToast
+import com.lt.basics.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.fragment_hot.*
 
 /**

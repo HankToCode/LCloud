@@ -3,9 +3,9 @@ package com.lt.ltotc.ui.fragment
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseFragment
-import com.lt.ltotc.base.BaseFragmentAdapter
-import com.lt.ltotc.utils.StatusBarUtil
+import com.lt.basics.base.BaseFragment
+import com.lt.basics.base.BaseFragmentAdapter
+import com.lt.basics.utils.StatusBarUtil
 import com.lt.ltotc.view.TabLayoutHelper
 import kotlinx.android.synthetic.main.fragment_hot.*
 

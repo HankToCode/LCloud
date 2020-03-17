@@ -1,16 +1,16 @@
 package com.lt.ltotc.mvp.presenter
 
 import android.app.Activity
-import com.lt.ltotc.MyApplication
-import com.lt.ltotc.base.BasePresenter
-import com.lt.ltotc.dataFormat
+import com.lt.basics.MyApplication
+import com.lt.basics.base.BasePresenter
+import com.lt.basics.dataFormat
 import com.lt.ltotc.mvp.contract.VideoDetailContract
 import com.lt.ltotc.mvp.model.VideoDetailModel
 import com.lt.ltotc.mvp.model.bean.HomeBean
-import com.lt.ltotc.net.exception.ExceptionHandle
-import com.lt.ltotc.showToast
-import com.lt.ltotc.utils.DisplayManager
-import com.lt.ltotc.utils.NetworkUtil
+import com.lt.basics.net.exception.ExceptionHandle
+import com.lt.basics.showToast
+import com.lt.basics.utils.DisplayManager
+import com.lt.basics.utils.NetworkUtil
 
 /**
  * Created by HankGreen on 2017/11/25.

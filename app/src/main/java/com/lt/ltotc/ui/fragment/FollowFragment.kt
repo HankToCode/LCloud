@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseFragment
+import com.lt.basics.base.BaseFragment
 import com.lt.ltotc.mvp.contract.FollowContract
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.FollowPresenter
-import com.lt.ltotc.net.exception.ErrorStatus
-import com.lt.ltotc.showToast
+import com.lt.basics.net.exception.ErrorStatus
+import com.lt.basics.showToast
 import com.lt.ltotc.ui.adapter.FollowAdapter
 import kotlinx.android.synthetic.main.layout_recyclerview.*
 

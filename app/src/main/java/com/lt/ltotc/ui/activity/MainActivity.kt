@@ -7,9 +7,9 @@ import android.view.KeyEvent
 import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseActivity
+import com.lt.basics.base.BaseActivity
 import com.lt.ltotc.mvp.model.bean.TabEntity
-import com.lt.ltotc.showToast
+import com.lt.basics.showToast
 import com.lt.ltotc.ui.fragment.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*

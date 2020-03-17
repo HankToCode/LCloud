@@ -7,10 +7,10 @@ import android.graphics.Typeface
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.Animation.AnimationListener
-import com.lt.ltotc.MyApplication
+import com.lt.basics.MyApplication
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseActivity
-import com.lt.ltotc.utils.AppUtils
+import com.lt.basics.base.BaseActivity
+import com.lt.basics.utils.AppUtils
 import kotlinx.android.synthetic.main.activity_splash.*
 import pub.devrel.easypermissions.EasyPermissions
 

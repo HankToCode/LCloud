@@ -3,12 +3,11 @@ package com.lt.ltotc.ui.activity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
-import com.lt.ltotc.MyApplication
+import com.lt.basics.MyApplication
 import com.lt.ltotc.R
-import com.lt.ltotc.R.id.toolbar
-import com.lt.ltotc.base.BaseActivity
-import com.lt.ltotc.utils.AppUtils
-import com.lt.ltotc.utils.StatusBarUtil
+import com.lt.basics.base.BaseActivity
+import com.lt.basics.utils.AppUtils
+import com.lt.basics.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_about.*
 
 /**

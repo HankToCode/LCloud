@@ -1,7 +1,6 @@
 package com.lt.ltotc.mvp.contract
 
-import com.lt.ltotc.base.IBaseView
-import com.lt.ltotc.base.IPresenter
+import com.lt.basics.base.IBaseView
 import com.lt.ltotc.mvp.model.bean.HomeBean
 
 /**

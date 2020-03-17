@@ -1,7 +1,7 @@
 package com.lt.ltotc.mvp.contract
 
-import com.lt.ltotc.base.IBaseView
-import com.lt.ltotc.base.IPresenter
+import com.lt.basics.base.IBaseView
+import com.lt.basics.base.IPresenter
 import com.lt.ltotc.mvp.model.bean.CategoryBean
 
 /**
@@ -22,7 +22,7 @@ interface CategoryContract {
         fun showError(errorMsg:String,errorCode:Int)
     }
 
-    interface Presenter:IPresenter<View>{
+    interface Presenter: IPresenter<View> {
         /**
          * 获取分类的信息
          */

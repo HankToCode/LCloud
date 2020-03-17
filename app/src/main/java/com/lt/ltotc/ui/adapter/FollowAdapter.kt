@@ -6,12 +6,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.ImageView
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.lt.basics.glide.GlideApp
 import com.lt.ltotc.R
-import com.lt.ltotc.glide.GlideApp
 import com.lt.ltotc.mvp.model.bean.HomeBean
-import com.lt.ltotc.view.recyclerview.MultipleType
-import com.lt.ltotc.view.recyclerview.ViewHolder
-import com.lt.ltotc.view.recyclerview.adapter.CommonAdapter
+import com.lt.basics.view.recyclerview.MultipleType
+import com.lt.basics.view.recyclerview.ViewHolder
+import com.lt.basics.view.recyclerview.adapter.CommonAdapter
 
 /**
  * Created by HankGreen on 2017/12/7.

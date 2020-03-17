@@ -6,9 +6,9 @@ import android.support.v4.widget.NestedScrollView
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseActivity
-import com.lt.ltotc.utils.CleanLeakUtils
-import com.lt.ltotc.utils.StatusBarUtil
+import com.lt.basics.base.BaseActivity
+import com.lt.basics.utils.CleanLeakUtils
+import com.lt.basics.utils.StatusBarUtil
 import com.scwang.smartrefresh.layout.api.RefreshHeader
 import com.scwang.smartrefresh.layout.listener.SimpleMultiPurposeListener
 import com.scwang.smartrefresh.layout.util.DensityUtil

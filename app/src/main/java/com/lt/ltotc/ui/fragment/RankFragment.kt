@@ -3,12 +3,12 @@ package com.lt.ltotc.ui.fragment
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseFragment
+import com.lt.basics.base.BaseFragment
 import com.lt.ltotc.mvp.contract.RankContract
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.RankPresenter
-import com.lt.ltotc.net.exception.ErrorStatus
-import com.lt.ltotc.showToast
+import com.lt.basics.net.exception.ErrorStatus
+import com.lt.basics.showToast
 import com.lt.ltotc.ui.adapter.CategoryDetailAdapter
 import kotlinx.android.synthetic.main.fragment_rank.*
 

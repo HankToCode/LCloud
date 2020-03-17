@@ -1,6 +1,6 @@
 package com.lt.ltotc.mvp.presenter
 
-import com.lt.ltotc.base.BasePresenter
+import com.lt.basics.base.BasePresenter
 import com.lt.ltotc.mvp.contract.CategoryDetailContract
 import com.lt.ltotc.mvp.model.CategoryDetailModel
 
@@ -8,7 +8,7 @@ import com.lt.ltotc.mvp.model.CategoryDetailModel
  * Created by HankGreen on 2017/11/30.
  * desc:
  */
-class CategoryDetailPresenter:BasePresenter<CategoryDetailContract.View>(),CategoryDetailContract.Presenter{
+class CategoryDetailPresenter: BasePresenter<CategoryDetailContract.View>(),CategoryDetailContract.Presenter{
 
    private val categoryDetailModel by lazy {
        CategoryDetailModel()

@@ -11,14 +11,14 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.lt.ltotc.Constants
+import com.lt.basics.Constants
 import com.lt.ltotc.R
-import com.lt.ltotc.durationFormat
-import com.lt.ltotc.glide.GlideApp
+import com.lt.basics.durationFormat
+import com.lt.basics.glide.GlideApp
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.ui.activity.VideoDetailActivity
-import com.lt.ltotc.view.recyclerview.ViewHolder
-import com.lt.ltotc.view.recyclerview.adapter.CommonAdapter
+import com.lt.basics.view.recyclerview.ViewHolder
+import com.lt.basics.view.recyclerview.adapter.CommonAdapter
 
 /**
  * Created by HankGreen on 2017/12/11.

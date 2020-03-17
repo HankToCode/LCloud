@@ -4,12 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.lt.ltotc.R
-import com.lt.ltotc.base.BaseFragment
-import com.lt.ltotc.showToast
+import com.lt.basics.base.BaseFragment
+import com.lt.basics.showToast
 import com.lt.ltotc.ui.activity.AboutActivity
 import com.lt.ltotc.ui.activity.ProfileHomePageActivity
 import com.lt.ltotc.ui.activity.WatchHistoryActivity
-import com.lt.ltotc.utils.StatusBarUtil
+import com.lt.basics.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.fragment_mine.*
 
 /**
