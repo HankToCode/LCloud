@@ -32,4 +32,26 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Support库
+    api rootProject.ext.supportLibs
+    // 网络请求库
+    api rootProject.ext.networkLibs
+    // RxJava2
+    api rootProject.ext.rxJavaLibs
+    api rootProject.ext.otherLibs
+    // APT dependencies(Kotlin内置的注解处理器)
+    kapt rootProject.ext.annotationProcessorLibs
+
+    //Logger
+    api 'com.orhanobut:logger:2.1.1'
+    //运行时权限
+    api 'pub.devrel:easypermissions:1.2.0'
+
+    //GlideOkHttp
+    api(rootProject.ext.glideOkhttp) {
+        exclude group: 'glide-parent'
+    }
+
+
 }
