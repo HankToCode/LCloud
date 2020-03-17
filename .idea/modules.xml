@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KotlinMvp-master.iml" filepath="$PROJECT_DIR$/KotlinMvp-master.iml" group="KotlinMvp-master" />
       <module fileurl="file://$PROJECT_DIR$/LTOTC-MVP.iml" filepath="$PROJECT_DIR$/LTOTC-MVP.iml" group="LTOTC-MVP" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="LTOTC-MVP/app" />
       <module fileurl="file://$PROJECT_DIR$/basics/basics.iml" filepath="$PROJECT_DIR$/basics/basics.iml" group="LTOTC-MVP/basics" />
