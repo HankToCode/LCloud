@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.activity
+package com.lt.ltotc.ui.main.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,7 +10,10 @@ import com.lt.ltotc.R
 import com.lt.basics.base.BaseActivity
 import com.lt.ltotc.mvp.model.bean.TabEntity
 import com.lt.basics.showToast
-import com.lt.ltotc.ui.fragment.*
+import com.lt.ltotc.ui.main.fragment.DiscoveryFragment
+import com.lt.ltotc.ui.main.fragment.HomeFragment
+import com.lt.ltotc.ui.main.fragment.HotFragment
+import com.lt.ltotc.ui.main.fragment.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 

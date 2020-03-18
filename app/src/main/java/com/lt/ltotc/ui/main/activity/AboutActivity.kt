@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.activity
+package com.lt.ltotc.ui.main.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent

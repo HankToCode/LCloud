@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.fragment
+package com.lt.ltotc.ui.main.fragment
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -10,7 +10,7 @@ import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.FollowPresenter
 import com.lt.basics.net.exception.ErrorStatus
 import com.lt.basics.showToast
-import com.lt.ltotc.ui.adapter.FollowAdapter
+import com.lt.ltotc.ui.main.adapter.FollowAdapter
 import kotlinx.android.synthetic.main.layout_recyclerview.*
 
 /**

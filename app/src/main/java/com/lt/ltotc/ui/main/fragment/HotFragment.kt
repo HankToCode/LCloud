@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.fragment
+package com.lt.ltotc.ui.main.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

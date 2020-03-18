@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.fragment
+package com.lt.ltotc.ui.main.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,10 @@ import android.view.View
 import com.lt.ltotc.R
 import com.lt.basics.base.BaseFragment
 import com.lt.basics.showToast
-import com.lt.ltotc.ui.activity.AboutActivity
-import com.lt.ltotc.ui.activity.ProfileHomePageActivity
-import com.lt.ltotc.ui.activity.WatchHistoryActivity
+import com.lt.ltotc.ui.main.activity.WatchHistoryActivity
 import com.lt.basics.utils.StatusBarUtil
+import com.lt.ltotc.ui.main.activity.AboutActivity
+import com.lt.ltotc.ui.main.activity.ProfileHomePageActivity
 import kotlinx.android.synthetic.main.fragment_mine.*
 
 /**
@@ -77,7 +77,7 @@ class MineFragment : BaseFragment(),View.OnClickListener {
             v?.id==R.id.tv_mine_message -> showToast("我的消息")
             v?.id==R.id.tv_mine_attention -> showToast("我的关注")
             v?.id==R.id.tv_mine_attention -> showToast("我的缓存")
-            v?.id==R.id.tv_watch_history -> startActivity(Intent(activity,WatchHistoryActivity::class.java))
+            v?.id==R.id.tv_watch_history -> startActivity(Intent(activity, WatchHistoryActivity::class.java))
             v?.id==R.id.tv_feedback -> showToast("意见反馈")
 
         }

@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.activity
+package com.lt.ltotc.ui.main.activity
 
 import android.support.v7.widget.LinearLayoutManager
 import com.lt.basics.Constants
@@ -6,7 +6,7 @@ import com.lt.basics.MyApplication
 import com.lt.ltotc.R
 import com.lt.basics.base.BaseActivity
 import com.lt.ltotc.mvp.model.bean.HomeBean
-import com.lt.ltotc.ui.adapter.WatchHistoryAdapter
+import com.lt.ltotc.ui.main.adapter.WatchHistoryAdapter
 import com.lt.basics.utils.StatusBarUtil
 import com.lt.basics.utils.WatchHistoryUtils
 import kotlinx.android.synthetic.main.activity_about.*

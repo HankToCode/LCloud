@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.activity
+package com.lt.ltotc.ui.main.activity
 
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
@@ -20,7 +20,7 @@ import com.lt.ltotc.mvp.contract.VideoDetailContract
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.VideoDetailPresenter
 import com.lt.basics.showToast
-import com.lt.ltotc.ui.adapter.VideoDetailAdapter
+import com.lt.ltotc.ui.main.adapter.VideoDetailAdapter
 import com.lt.basics.utils.CleanLeakUtils
 import com.lt.basics.utils.StatusBarUtil
 import com.lt.basics.utils.WatchHistoryUtils

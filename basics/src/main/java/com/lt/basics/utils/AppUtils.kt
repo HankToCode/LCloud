@@ -21,8 +21,8 @@ class AppUtils private constructor() {
 
     companion object {
 
-        private val DEBUG = true
-        private val TAG = "AppUtils"
+        private const val DEBUG = true
+        private const val TAG = "AppUtils"
 
 
         /**

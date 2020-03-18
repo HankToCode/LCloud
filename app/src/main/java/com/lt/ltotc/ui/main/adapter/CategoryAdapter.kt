@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.adapter
+package com.lt.ltotc.ui.main.adapter
 
 import android.app.Activity
 import android.content.Context
@@ -13,9 +13,9 @@ import com.lt.basics.MyApplication
 import com.lt.basics.glide.GlideApp
 import com.lt.ltotc.R
 import com.lt.ltotc.mvp.model.bean.CategoryBean
-import com.lt.ltotc.ui.activity.CategoryDetailActivity
 import com.lt.basics.view.recyclerview.ViewHolder
 import com.lt.basics.view.recyclerview.adapter.CommonAdapter
+import com.lt.ltotc.ui.main.activity.CategoryDetailActivity
 
 /**
  * Created by HankGreen on 2017/11/29.
@@ -59,12 +59,10 @@ class CategoryAdapter(mContext: Context, categoryList: ArrayList<CategoryBean>, 
             }
         })
 
-        holder.setOnItemClickListener(object :View.OnClickListener{
-            override fun onClick(p0: View?) {
-                val intent = Intent(mContext as Activity,CategoryDetailActivity::class.java)
-                intent.putExtra(Constants.BUNDLE_CATEGORY_DATA,data)
-                mContext.startActivity(intent)
-            }
+        holder.setOnItemClickListener(View.OnClickListener {
+            val intent = Intent(mContext as Activity, CategoryDetailActivity::class.java)
+            intent.putExtra(Constants.BUNDLE_CATEGORY_DATA,data)
+            mContext.startActivity(intent)
         })
     }
 }

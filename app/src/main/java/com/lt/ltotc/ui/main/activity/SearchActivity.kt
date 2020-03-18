@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.activity
+package com.lt.ltotc.ui.main.activity
 
 import android.annotation.TargetApi
 import android.graphics.Typeface
@@ -22,8 +22,8 @@ import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.SearchPresenter
 import com.lt.basics.net.exception.ErrorStatus
 import com.lt.basics.showToast
-import com.lt.ltotc.ui.adapter.CategoryDetailAdapter
-import com.lt.ltotc.ui.adapter.HotKeywordsAdapter
+import com.lt.ltotc.ui.main.adapter.CategoryDetailAdapter
+import com.lt.ltotc.ui.main.adapter.HotKeywordsAdapter
 import com.lt.basics.utils.CleanLeakUtils
 import com.lt.basics.utils.StatusBarUtil
 import com.lt.ltotc.view.ViewAnimUtils

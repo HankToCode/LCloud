@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.adapter
+package com.lt.ltotc.ui.main.adapter
 
 import android.app.Activity
 import android.content.Context
@@ -14,7 +14,7 @@ import com.lt.ltotc.R
 import com.lt.basics.durationFormat
 import com.lt.basics.glide.GlideApp
 import com.lt.ltotc.mvp.model.bean.HomeBean
-import com.lt.ltotc.ui.activity.VideoDetailActivity
+import com.lt.ltotc.ui.main.activity.VideoDetailActivity
 import com.lt.basics.view.recyclerview.ViewHolder
 import com.lt.basics.view.recyclerview.adapter.CommonAdapter
 import com.orhanobut.logger.Logger

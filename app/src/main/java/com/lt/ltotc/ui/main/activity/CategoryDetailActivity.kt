@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.activity
+package com.lt.ltotc.ui.main.activity
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -12,7 +12,7 @@ import com.lt.ltotc.mvp.contract.CategoryDetailContract
 import com.lt.ltotc.mvp.model.bean.CategoryBean
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.CategoryDetailPresenter
-import com.lt.ltotc.ui.adapter.CategoryDetailAdapter
+import com.lt.ltotc.ui.main.adapter.CategoryDetailAdapter
 import com.lt.basics.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_category_detail.*
 

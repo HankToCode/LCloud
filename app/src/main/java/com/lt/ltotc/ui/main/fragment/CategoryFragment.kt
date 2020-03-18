@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.fragment
+package com.lt.ltotc.ui.main.fragment
 
 import android.graphics.Rect
 import android.os.Bundle
@@ -12,7 +12,7 @@ import com.lt.ltotc.mvp.model.bean.CategoryBean
 import com.lt.ltotc.mvp.presenter.CategoryPresenter
 import com.lt.basics.net.exception.ErrorStatus
 import com.lt.basics.showToast
-import com.lt.ltotc.ui.adapter.CategoryAdapter
+import com.lt.ltotc.ui.main.adapter.CategoryAdapter
 import com.lt.basics.utils.DisplayManager
 import kotlinx.android.synthetic.main.fragment_category.*
 

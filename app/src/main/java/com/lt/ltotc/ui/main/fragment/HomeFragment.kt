@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.fragment
+package com.lt.ltotc.ui.main.fragment
 
 import android.content.Intent
 import android.os.Build
@@ -14,9 +14,9 @@ import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.HomePresenter
 import com.lt.basics.net.exception.ErrorStatus
 import com.lt.basics.showToast
-import com.lt.ltotc.ui.activity.SearchActivity
-import com.lt.ltotc.ui.adapter.HomeAdapter
+import com.lt.ltotc.ui.main.adapter.HomeAdapter
 import com.lt.basics.utils.StatusBarUtil
+import com.lt.ltotc.ui.main.activity.SearchActivity
 import com.orhanobut.logger.Logger
 import com.scwang.smartrefresh.header.MaterialHeader
 import kotlinx.android.synthetic.main.fragment_home.*

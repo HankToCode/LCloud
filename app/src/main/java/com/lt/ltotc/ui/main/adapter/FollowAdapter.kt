@@ -1,4 +1,4 @@
-package com.lt.ltotc.ui.adapter
+package com.lt.ltotc.ui.main.adapter
 
 import android.app.Activity
 import android.content.Context
