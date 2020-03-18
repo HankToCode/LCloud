@@ -38,6 +38,8 @@ android {
             //APP的build.gradle设置支持的SO库架构
             abiFilters 'armeabi', 'armeabi-v7a', 'x86'
         }
+
+        multiDexEnabled true
     }
     buildTypes {
         debug {
@@ -105,7 +107,7 @@ dependencies {
 
     //basics库
     implementation project(':basics')
-
+    implementation 'com.android.support:multidex:1.0.3'
 
 
 
