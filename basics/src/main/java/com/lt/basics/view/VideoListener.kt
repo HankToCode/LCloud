@@ -2,6 +2,7 @@ package com.lt.basics.view
 
 import com.shuyu.gsyvideoplayer.listener.StandardVideoAllCallBack
 
+
 /**
  * Created by HankGreen on 2017/11/27.
  * desc: VideoAllCallBack 回调
