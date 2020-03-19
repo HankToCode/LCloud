@@ -20,7 +20,7 @@ import pub.devrel.easypermissions.EasyPermissions
  * created: 2017/10/25
  * desc:BaseActivity基类
  */
-abstract class BaseActivity : AppCompatActivity(),EasyPermissions.PermissionCallbacks {
+abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
     /**
      * 多种状态的 View 的切换
      */
@@ -29,6 +29,7 @@ abstract class BaseActivity : AppCompatActivity(),EasyPermissions.PermissionCall
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutId())
+        AppManager.appManager?.addActivity(this)
         initData()
         initView()
         start()
@@ -44,7 +45,6 @@ abstract class BaseActivity : AppCompatActivity(),EasyPermissions.PermissionCall
     open val mRetryClickListener: View.OnClickListener = View.OnClickListener {
         start()
     }
-
 
     /**
      *  加载布局
@@ -88,6 +88,7 @@ abstract class BaseActivity : AppCompatActivity(),EasyPermissions.PermissionCall
     override fun onDestroy() {
         super.onDestroy()
         MyApplication.getRefWatcher(this)?.watch(this)
+        AppManager.appManager?.removeActivity(this)
     }
 
 
