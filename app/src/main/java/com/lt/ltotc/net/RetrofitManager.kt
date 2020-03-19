@@ -1,12 +1,16 @@
 package com.lt.ltotc.net
 
 import com.lt.basics.MyApplication
+import com.lt.basics.net.interceptor.logging.Level
+import com.lt.basics.net.interceptor.logging.LoggingInterceptor
 import com.lt.basics.utils.AppUtils
 import com.lt.basics.utils.NetworkUtil
 import com.lt.basics.utils.Preference
+import com.lt.ltotc.BuildConfig
 import com.lt.ltotc.api.ApiService
 import com.lt.ltotc.api.UrlConstant
 import okhttp3.*
+import okhttp3.internal.platform.Platform
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -19,13 +23,13 @@ import java.util.concurrent.TimeUnit
  *
  */
 
-object RetrofitManager{
+object RetrofitManager {
 
-    val service: ApiService by lazy (LazyThreadSafetyMode.SYNCHRONIZED){
+    val service: ApiService by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
         getRetrofit().create(ApiService::class.java)
     }
 
-    private var token:String by Preference("token","")
+    private var token: String by Preference("token", "")
 
     /**
      * 设置公共参数
@@ -114,8 +118,16 @@ object RetrofitManager{
         return OkHttpClient.Builder()
                 .addInterceptor(addQueryParameterInterceptor())  //参数添加
                 .addInterceptor(addHeaderInterceptor()) // token过滤
-//              .addInterceptor(addCacheInterceptor())
-                .addInterceptor(httpLoggingInterceptor) //日志,所有的请求响应度看到
+                .addInterceptor(addCacheInterceptor())
+                .addInterceptor(LoggingInterceptor
+                        .Builder()//构建者模式
+                        .loggable(BuildConfig.DEBUG) //是否开启日志打印
+                        .setLevel(Level.BASIC) //打印的等级
+                        .log(Platform.INFO) // 打印类型
+                        .request("Request") // request的Tag
+                        .response("Response")// Response的Tag
+                        .addHeader("log-header", "I am the log request header.") // 添加打印头, 注意 key 和 value 都不能是中文
+                        .build()) //日志,所有的请求响应度看到
                 .cache(cache)  //添加缓存
                 .connectTimeout(60L, TimeUnit.SECONDS)
                 .readTimeout(60L, TimeUnit.SECONDS)

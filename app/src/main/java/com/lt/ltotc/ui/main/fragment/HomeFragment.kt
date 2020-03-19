@@ -175,7 +175,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
      */
     override fun setHomeData(homeBean: HomeBean) {
         mLayoutStatusView?.showContent()
-        Logger.d(homeBean)
+//        Logger.d(homeBean)
 
         // Adapter
         mHomeAdapter = activity?.let { HomeAdapter(it, homeBean.issueList[0].itemList) }
