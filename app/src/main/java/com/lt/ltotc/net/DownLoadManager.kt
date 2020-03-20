@@ -3,7 +3,6 @@ package com.lt.ltotc.net
 import com.lt.basics.net.interceptor.ProgressInterceptor
 import com.lt.basics.net.interceptor.download.DownLoadSubscriber
 import com.lt.basics.net.interceptor.download.ProgressCallBack
-import com.lt.basics.utils.NetworkUtil
 import com.lt.ltotc.api.UrlConstant
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -20,6 +19,7 @@ import java.util.concurrent.TimeUnit
 /**
  * Created by HankGreen on 2017/5/11.
  * 文件下载管理，封装一行代码实现下载
+ * DownLoadManager.getInstance().load()
  */
 class DownLoadManager private constructor() {
     //下载
