@@ -1,16 +1,12 @@
 package com.lt.ltotc.ui.main.activity
 
 import android.annotation.SuppressLint
-import android.os.Build
-import android.support.annotation.RequiresApi
 import android.view.View
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import com.lt.basics.base.BaseActivity
 import com.lt.basics.utils.StatusBarUtil
 import com.lt.ltotc.R
 import com.lt.ltotc.mvp.presenter.TradingCenterPresenter
+import com.lt.ltotc.room.database.UserDatabase
 import com.lt.ltotc.utils.ColorUtil
 import kotlinx.android.synthetic.main.activity_about.*
 import kotlinx.android.synthetic.main.layout_title.*

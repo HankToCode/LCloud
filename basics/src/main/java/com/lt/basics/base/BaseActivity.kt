@@ -33,7 +33,6 @@ abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCal
         setContentView(layoutId())
         ImmersionBar.with(this).reset().transparentStatusBar().statusBarDarkFont(true).fullScreen(true).fitsSystemWindows(false).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).init()
 
-
         AppManager.appManager?.addActivity(this)
         initData()
         initView()

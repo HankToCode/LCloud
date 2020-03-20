@@ -85,4 +85,8 @@ dependencies {
     // 沉浸式kotlin扩展
     api 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
 
+    //ROOM数据库
+    api 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+
 }
