@@ -108,7 +108,7 @@ dependencies {
     //basics库
     implementation project(':basics')
     implementation 'com.android.support:multidex:1.0.3'
-
+    implementation 'me.jessyan:autosize:1.2.1'
 
 
 

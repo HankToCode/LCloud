@@ -82,7 +82,7 @@ class StatusBarUtil {
         //</editor-fold>
 
         @TargetApi(Build.VERSION_CODES.M)
-//<editor-fold desc="DarkMode">
+        //<editor-fold desc="DarkMode">
         fun darkMode(activity: Activity, dark: Boolean) {
             when {
                 isFlyme4Later -> darkModeForFlyme4(activity.window, dark)
