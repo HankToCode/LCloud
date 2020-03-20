@@ -7,7 +7,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.lt.ltotc.R
 import com.lt.basics.base.BaseActivity
-import com.lt.basics.utils.CleanLeakUtils
+import com.lt.basics.utils.CleanLeakUtil
 import com.lt.basics.utils.StatusBarUtil
 import com.scwang.smartrefresh.layout.api.RefreshHeader
 import com.scwang.smartrefresh.layout.listener.SimpleMultiPurposeListener
@@ -97,7 +97,7 @@ class ProfileHomePageActivity : BaseActivity() {
     }
 
     override fun onDestroy() {
-        CleanLeakUtils.fixInputMethodManagerLeak(this)
+        CleanLeakUtil.fixInputMethodManagerLeak(this)
         super.onDestroy()
     }
 }

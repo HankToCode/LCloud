@@ -6,7 +6,7 @@ import android.net.Uri
 import com.lt.basics.MyApplication
 import com.lt.ltotc.R
 import com.lt.basics.base.BaseActivity
-import com.lt.basics.utils.AppUtils
+import com.lt.basics.utils.AppUtil
 import com.lt.basics.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_about.*
 
@@ -25,7 +25,7 @@ class AboutActivity : BaseActivity() {
         StatusBarUtil.darkMode(this)
         StatusBarUtil.setPaddingSmart(this, toolbar)
 
-        tv_version_name.text ="v${AppUtils.getVerName(MyApplication.context)}"
+        tv_version_name.text ="v${AppUtil.getVerName(MyApplication.context)}"
         //返回
         toolbar.setNavigationOnClickListener { finish() }
         //访问 GitHub

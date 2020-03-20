@@ -8,7 +8,7 @@ import com.lt.basics.base.BaseActivity
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.ui.main.adapter.WatchHistoryAdapter
 import com.lt.basics.utils.StatusBarUtil
-import com.lt.basics.utils.WatchHistoryUtils
+import com.lt.basics.utils.WatchHistoryUtil
 import kotlinx.android.synthetic.main.activity_about.*
 import kotlinx.android.synthetic.main.layout_recyclerview.*
 import java.util.*
@@ -66,7 +66,7 @@ class WatchHistoryActivity : BaseActivity() {
      */
     private fun queryWatchHistory(): ArrayList<HomeBean.Issue.Item> {
         val watchList = ArrayList<HomeBean.Issue.Item>()
-        val hisAll = WatchHistoryUtils.getAll(Constants.FILE_WATCH_HISTORY_NAME, MyApplication.context) as Map<*, *>
+        val hisAll = WatchHistoryUtil.getAll(Constants.FILE_WATCH_HISTORY_NAME, MyApplication.context) as Map<*, *>
         //将key排序升序
         val keys = hisAll.keys.toTypedArray()
         Arrays.sort(keys)
@@ -75,7 +75,7 @@ class WatchHistoryActivity : BaseActivity() {
         val hisLength = if (keyLength > HISTORY_MAX) HISTORY_MAX else keyLength
         // 反序列化和遍历 添加观看的历史记录
         (1..hisLength).mapTo(watchList) {
-            WatchHistoryUtils.getObject(Constants.FILE_WATCH_HISTORY_NAME, MyApplication.context,
+            WatchHistoryUtil.getObject(Constants.FILE_WATCH_HISTORY_NAME, MyApplication.context,
                     keys[keyLength - it] as String) as HomeBean.Issue.Item
         }
         

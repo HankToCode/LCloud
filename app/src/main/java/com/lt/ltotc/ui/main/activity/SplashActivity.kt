@@ -10,7 +10,7 @@ import android.view.animation.Animation.AnimationListener
 import com.lt.basics.MyApplication
 import com.lt.ltotc.R
 import com.lt.basics.base.BaseActivity
-import com.lt.basics.utils.AppUtils
+import com.lt.basics.utils.AppUtil
 import kotlinx.android.synthetic.main.activity_splash.*
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -46,7 +46,7 @@ class SplashActivity : BaseActivity() {
 
         tv_app_name.typeface = textTypeface
         tv_splash_desc.typeface = descTypeFace
-        tv_version_name.text = "v${AppUtils.getVerName(MyApplication.context)}"
+        tv_version_name.text = "v${AppUtil.getVerName(MyApplication.context)}"
 
         //渐变展示启动屏
         alphaAnimation= AlphaAnimation(0.3f, 1.0f)

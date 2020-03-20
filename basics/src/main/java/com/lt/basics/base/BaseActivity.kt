@@ -1,13 +1,10 @@
 package com.lt.basics.base
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
 import android.widget.Toast
 import com.classic.common.MultipleStatusView
 import com.gyf.immersionbar.ImmersionBar
@@ -71,30 +68,11 @@ abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCal
     abstract fun start()
 
 
-    /**
-     * 打卡软键盘
-     */
-    fun openKeyBord(mEditText: EditText, mContext: Context) {
-        val imm = mContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.showSoftInput(mEditText, InputMethodManager.RESULT_SHOWN)
-        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY)
-    }
-
-    /**
-     * 关闭软键盘
-     */
-    fun closeKeyBord(mEditText: EditText, mContext: Context) {
-        val imm = mContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(mEditText.windowToken, 0)
-    }
-
-
     override fun onDestroy() {
         super.onDestroy()
         MyApplication.getRefWatcher(this)?.watch(this)
         AppManager.appManager?.removeActivity(this)
     }
-
 
     /**
      * 重写要申请权限的Activity或者Fragment的onRequestPermissionsResult()方法，

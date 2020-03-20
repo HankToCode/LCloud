@@ -12,7 +12,7 @@ import java.security.MessageDigest
  * desc: APP 相关的工具类
  */
 
-class AppUtils private constructor() {
+class AppUtil private constructor() {
 
 
     init {

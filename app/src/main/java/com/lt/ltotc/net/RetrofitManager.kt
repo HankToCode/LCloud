@@ -3,7 +3,7 @@ package com.lt.ltotc.net
 import com.lt.basics.MyApplication
 import com.lt.basics.net.interceptor.logging.Level
 import com.lt.basics.net.interceptor.logging.LoggingInterceptor
-import com.lt.basics.utils.AppUtils
+import com.lt.basics.utils.AppUtil
 import com.lt.basics.utils.NetworkUtil
 import com.lt.basics.utils.Preference
 import com.lt.ltotc.BuildConfig
@@ -41,7 +41,7 @@ object RetrofitManager {
             val modifiedUrl = originalRequest.url().newBuilder()
                     // Provide your custom parameter here
                     .addQueryParameter("udid", "d2807c895f0348a180148c9dfa6f2feeac0781b5")
-                    .addQueryParameter("deviceModel", AppUtils.getMobileModel())
+                    .addQueryParameter("deviceModel", AppUtil.getMobileModel())
                     .build()
             request = originalRequest.newBuilder().url(modifiedUrl).build()
             chain.proceed(request)

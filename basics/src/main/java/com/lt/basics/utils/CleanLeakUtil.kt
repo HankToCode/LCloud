@@ -11,7 +11,7 @@ import java.lang.reflect.Field
  * desc:
  */
 
-object CleanLeakUtils {
+object CleanLeakUtil {
 
     fun fixInputMethodManagerLeak(destContext: Context?) {
         if (destContext == null) {

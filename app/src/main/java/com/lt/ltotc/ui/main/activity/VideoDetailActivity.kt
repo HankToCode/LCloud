@@ -21,9 +21,9 @@ import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.VideoDetailPresenter
 import com.lt.basics.showToast
 import com.lt.ltotc.ui.main.adapter.VideoDetailAdapter
-import com.lt.basics.utils.CleanLeakUtils
+import com.lt.basics.utils.CleanLeakUtil
 import com.lt.basics.utils.StatusBarUtil
-import com.lt.basics.utils.WatchHistoryUtils
+import com.lt.basics.utils.WatchHistoryUtil
 import com.lt.basics.view.VideoListener
 import com.orhanobut.logger.Logger
 import com.scwang.smartrefresh.header.MaterialHeader
@@ -205,13 +205,13 @@ class VideoDetailActivity : BaseActivity(), VideoDetailContract.View {
      */
     private fun saveWatchVideoHistoryInfo(watchItem: HomeBean.Issue.Item) {
         //保存之前要先查询sp中是否有该value的记录，有则删除.这样保证搜索历史记录不会有重复条目
-        val historyMap = WatchHistoryUtils.getAll(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context) as Map<*, *>
+        val historyMap = WatchHistoryUtil.getAll(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context) as Map<*, *>
         for ((key, _) in historyMap) {
-            if (watchItem == WatchHistoryUtils.getObject(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context, key as String)) {
-                WatchHistoryUtils.remove(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context, key)
+            if (watchItem == WatchHistoryUtil.getObject(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context, key as String)) {
+                WatchHistoryUtil.remove(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context, key)
             }
         }
-        WatchHistoryUtils.putObject(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context, watchItem,"" + mFormat.format(Date()))
+        WatchHistoryUtil.putObject(Constants.FILE_WATCH_HISTORY_NAME,MyApplication.context, watchItem,"" + mFormat.format(Date()))
     }
 
 
@@ -319,7 +319,7 @@ class VideoDetailActivity : BaseActivity(), VideoDetailContract.View {
     }
 
     override fun onDestroy() {
-        CleanLeakUtils.fixInputMethodManagerLeak(this)
+        CleanLeakUtil.fixInputMethodManagerLeak(this)
         super.onDestroy()
         GSYVideoPlayer.releaseAllVideos()
         orientationUtils?.releaseListener()

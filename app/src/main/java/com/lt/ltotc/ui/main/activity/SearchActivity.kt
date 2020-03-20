@@ -15,17 +15,18 @@ import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import com.google.android.flexbox.*
 import com.lt.basics.MyApplication
-import com.lt.ltotc.R
 import com.lt.basics.base.BaseActivity
+import com.lt.basics.net.exception.ErrorStatus
+import com.lt.basics.showToast
+import com.lt.basics.utils.CleanLeakUtil
+import com.lt.basics.utils.SoftInputUtil
+import com.lt.basics.utils.StatusBarUtil
+import com.lt.ltotc.R
 import com.lt.ltotc.mvp.contract.SearchContract
 import com.lt.ltotc.mvp.model.bean.HomeBean
 import com.lt.ltotc.mvp.presenter.SearchPresenter
-import com.lt.basics.net.exception.ErrorStatus
-import com.lt.basics.showToast
 import com.lt.ltotc.ui.main.adapter.CategoryDetailAdapter
 import com.lt.ltotc.ui.main.adapter.HotKeywordsAdapter
-import com.lt.basics.utils.CleanLeakUtils
-import com.lt.basics.utils.StatusBarUtil
 import com.lt.ltotc.view.ViewAnimUtils
 import kotlinx.android.synthetic.main.activity_search.*
 
@@ -123,7 +124,7 @@ class SearchActivity : BaseActivity(), SearchContract.View {
      * 关闭软件盘
      */
     override fun closeSoftKeyboard() {
-        closeKeyBord(et_search_view, applicationContext)
+        SoftInputUtil.closeKeyBord(et_search_view, applicationContext)
     }
 
     override fun start() {
@@ -261,7 +262,7 @@ class SearchActivity : BaseActivity(), SearchContract.View {
         rel_container.startAnimation(animation)
         rel_container.visibility = View.VISIBLE
         //打开软键盘
-        openKeyBord(et_search_view, applicationContext)
+        SoftInputUtil.openKeyBord(et_search_view, applicationContext)
     }
 
 
@@ -312,7 +313,7 @@ class SearchActivity : BaseActivity(), SearchContract.View {
     }
 
     override fun onDestroy() {
-        CleanLeakUtils.fixInputMethodManagerLeak(this)
+        CleanLeakUtil.fixInputMethodManagerLeak(this)
         super.onDestroy()
         mPresenter.detachView()
         mTextTypeface = null
