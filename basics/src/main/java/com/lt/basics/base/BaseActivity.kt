@@ -5,10 +5,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import com.classic.common.MultipleStatusView
+import com.gyf.immersionbar.ImmersionBar
 import com.lt.basics.MyApplication
 import io.reactivex.annotations.NonNull
 import pub.devrel.easypermissions.AppSettingsDialog
@@ -29,6 +31,9 @@ abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCal
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutId())
+        ImmersionBar.with(this).reset().transparentStatusBar().statusBarDarkFont(true).fullScreen(true).fitsSystemWindows(false).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).init()
+
+
         AppManager.appManager?.addActivity(this)
         initData()
         initView()

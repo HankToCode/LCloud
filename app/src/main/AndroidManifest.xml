@@ -25,6 +25,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:largeHeap="true"
+        android:resizeableActivity="true"
+        android:maxAspectRatio="2.4"
         android:theme="@style/AppTheme.NoActionBar">
 
         <meta-data
@@ -33,6 +35,10 @@
         <meta-data
             android:name="design_height_in_dp"
             android:value="640"/>
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
 
 
         <activity

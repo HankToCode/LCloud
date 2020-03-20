@@ -23,6 +23,7 @@
         android:text="标题"
         android:layout_centerInParent="true"
         android:textColor="@color/layout_toolbar_title"
+        android:textStyle="bold"
         android:textSize="@dimen/font_18" />
 
     <LinearLayout

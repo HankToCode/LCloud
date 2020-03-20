@@ -107,8 +107,13 @@ dependencies {
 
     //basics库
     implementation project(':basics')
+
+    //multidex方案
     implementation 'com.android.support:multidex:1.0.3'
+
+    //今日头条兼容适配方案
     implementation 'me.jessyan:autosize:1.2.1'
+
 
 
 

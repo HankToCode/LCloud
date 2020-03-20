@@ -77,4 +77,12 @@ dependencies {
     //腾讯 bugly
     api 'com.tencent.bugly:crashreport:2.6.6.1'
 
+
+    // 沉浸式基础依赖包
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+    // 沉浸式fragment快速实现
+    api 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    // 沉浸式kotlin扩展
+    api 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
+
 }
