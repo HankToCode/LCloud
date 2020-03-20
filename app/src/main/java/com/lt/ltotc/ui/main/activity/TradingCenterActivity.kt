@@ -6,14 +6,14 @@ import com.lt.basics.base.BaseActivity
 import com.lt.basics.utils.StatusBarUtil
 import com.lt.ltotc.R
 import com.lt.ltotc.mvp.presenter.TradingCenterPresenter
-import com.lt.ltotc.room.database.UserDatabase
 import com.lt.ltotc.utils.ColorUtil
-import kotlinx.android.synthetic.main.activity_about.*
 import kotlinx.android.synthetic.main.layout_title.*
+import kotlinx.android.synthetic.main.layout_toolbar.*
 
 /**
  * Created by HankGreen on 2020/3/20.
  * desc: 交易中心
+ * Tips:onDestroy() 记得mPresenter.detachView()
  */
 class TradingCenterActivity : BaseActivity() {
     override fun layoutId(): Int = R.layout.activity_trading_center

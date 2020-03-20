@@ -2,8 +2,12 @@ package com.lt.ltotc.mvp.model.bean
 
 import java.io.Serializable
 
-data class AuthorInfoBean(val tabInfo: TabInfo,
-                          val pgcInfo: PgcInfo) : Serializable {
+/**
+ * 数据基类定义
+ *
+ */
+data class BaseBean(val tabInfo: TabInfo,
+                    val pgcInfo: PgcInfo) : Serializable {
 
     data class TabInfo(val tabList: List<TabList>,
                        val defaultIdx: Int) : Serializable
