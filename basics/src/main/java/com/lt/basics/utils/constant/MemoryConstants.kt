@@ -1,8 +1,6 @@
 package com.lt.basics.utils.constant
 
 import android.support.annotation.IntDef
-import java.lang.annotation.Retention
-import java.lang.annotation.RetentionPolicy
 
 /**
  * Created by HankGreen on 2017/5/14.
@@ -27,6 +25,6 @@ object MemoryConstants {
     const val GB = 1073741824
 
     @IntDef(BYTE, KB, MB, GB)
-    @Retention(RetentionPolicy.SOURCE)
+    @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     annotation class Unit
 }

@@ -6,6 +6,17 @@
 
     <color name="layout_toolbar_title">#222222</color>
 
-
+    <color name="color_33">#333333</color>
+    <color name="color_66">#666666</color>
+    <color name="color_99">#999999</color>
+    <color name="color_977c58">#977C58</color>
+    <color name="color_288de1">#288DE1</color>
+    <color name="color_d1fef9f5">#d1fef9f5</color>
+    <color name="color_dd">#dddddd</color>
+    <color name="color_f6">#F6F6F6</color>
+    <color name="color_71a800">#71A800</color>
+    <color name="color_ea2870">#EA2870</color>
+    <color name="color_f7aa3c">#F7AA3C</color>
+    <color name="color_5b91e5">#5b91e5</color>
 
 </resources>

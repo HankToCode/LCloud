@@ -7,4 +7,9 @@ package com.lt.ltotc.api
 object UrlConstant{
     const val BASE_URL = "http://baobab.kaiyanapp.com/api/"
 
+
+    const val GET_TRADE_DATA = "/api/order/trade/getTradeData"
+
+
+
 }

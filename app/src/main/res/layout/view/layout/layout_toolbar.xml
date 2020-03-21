@@ -14,7 +14,7 @@
         android:layout_height="@dimen/layout_toolbar_height"
         android:background="?attr/colorPrimary"
         app:contentInsetStart="10dp"
-        app:contentInsetRight="10dp"
+        app:contentInsetRight="0dp"
         app:layout_scrollFlags="scroll|enterAlways"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
