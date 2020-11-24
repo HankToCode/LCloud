@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+	package
+		ADDED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:2:5-33
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+		ADDED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+		ADDED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:1-2:35
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+		ADDED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+		ADDED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhangrongdong/Desktop/IdeaFast/LCloud/multiple-status-view/src/main/AndroidManifest.xml

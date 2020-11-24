@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lt.basics" >
+    package="com.app.basics" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

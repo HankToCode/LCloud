@@ -9,15 +9,15 @@ apply plugin: 'kotlin-kapt'  //kapt3插件
 android {
     signingConfigs {
         config {
-            keyAlias 'ktmp'
-            keyPassword 'ktmp123456'
-            storeFile file('../ktmp.jks')
-            storePassword 'ktmp123456'
+            keyAlias 'lcloudjks'
+            keyPassword 'pa123456'
+            storeFile file('../lcloudjks')
+            storePassword 'pa123456'
         }
     }
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {
-        applicationId "com.lt.ltotc"
+        applicationId "com.app.cloud"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
