@@ -136,7 +136,7 @@ public final class ExpandableTextView extends android.widget.LinearLayout implem
             return 0;
         }
         
-        private final android.graphics.drawable.Drawable getDrawable(android.content.Context context, @android.support.annotation.DrawableRes()
+        private final android.graphics.drawable.Drawable getDrawable(android.content.Context context, @androidx.annotation.DrawableRes()
         int resId) {
             return null;
         }

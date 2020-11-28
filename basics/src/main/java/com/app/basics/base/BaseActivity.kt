@@ -1,15 +1,14 @@
 package com.app.basics.base
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.widget.Toast
-import com.classic.common.MultipleStatusView
-import com.gyf.immersionbar.ImmersionBar
 import com.app.basics.MyApplication
+import com.app.basics.bus.RxSubscriptions
+import com.trello.rxlifecycle3.components.support.RxAppCompatActivity
 import io.reactivex.annotations.NonNull
+import io.reactivex.disposables.Disposable
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -19,29 +18,26 @@ import pub.devrel.easypermissions.EasyPermissions
  * created: 2017/10/25
  * desc:BaseActivity基类
  */
-abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
+abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionCallbacks {
+
     /**
-     * 多种状态的 View 的切换
+     * RX订阅者处理类
      */
-    protected var mLayoutStatusView: MultipleStatusView? = null
+    var rxSubscriptions: RxSubscriptions? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutId())
-        ImmersionBar.with(this).reset().transparentStatusBar().statusBarDarkFont(true).fullScreen(true).fitsSystemWindows(false).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).init()
 
         AppManager.appManager?.addActivity(this)
+        rxSubscriptions = RxSubscriptions()
         initData()
         initView()
         start()
-        initListener()
 
 
     }
 
-    private fun initListener() {
-        mLayoutStatusView?.setOnClickListener(mRetryClickListener)
-    }
 
     open val mRetryClickListener: View.OnClickListener = View.OnClickListener {
         start()
@@ -68,10 +64,18 @@ abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCal
     abstract fun start()
 
 
+    /**
+     * 为当前活动添加订阅，方便管理
+     */
+    fun addSubscription(vararg disposable: Disposable) {
+        rxSubscriptions?.addSubscription(*disposable)
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         MyApplication.getRefWatcher(this)?.watch(this)
         AppManager.appManager?.removeActivity(this)
+        rxSubscriptions?.disSubscription()
     }
 
     /**

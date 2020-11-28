@@ -1,14 +1,14 @@
 package com.app.basics.base
 
 import android.app.Activity
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import java.util.*
 
 /**
  * Created by HankGreen on 2017/6/15.
  * activity堆栈式管理
  */
-class AppManager private constructor() {
+open class AppManager private constructor() {
     /**
      * 添加Activity到堆栈
      */
@@ -54,7 +54,7 @@ class AppManager private constructor() {
     /**
      * 结束指定的Activity
      */
-    fun finishActivity(activity: Activity?) {
+    open fun finishActivity(activity: Activity?) {
         if (activity != null) {
             if (!activity.isFinishing) {
                 activity.finish()
@@ -142,7 +142,7 @@ class AppManager private constructor() {
     /**
      * 退出应用程序
      */
-    fun AppExit() {
+    fun appExit() {
         try {
             finishAllActivity()
             // 杀死该应用进程

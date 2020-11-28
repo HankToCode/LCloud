@@ -1,4 +1,4 @@
-package com.app.cloud.view
+package com.app.basics.view
 
 import android.content.Context
 import android.graphics.*
@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatImageView
 import com.app.basics.R
 
 @Suppress("IMPLICIT_CAST_TO_ANY")
@@ -14,7 +15,7 @@ import com.app.basics.R
  * desc: 圆角的 ImageView
  */
 
-class CircleImageView(context: Context, attrs: AttributeSet) : android.support.v7.widget.AppCompatImageView(context, attrs) {
+class CircleImageView(context: Context, attrs: AttributeSet) : AppCompatImageView(context, attrs) {
 
     private val mType: Int
     private val mBorderColor: Int

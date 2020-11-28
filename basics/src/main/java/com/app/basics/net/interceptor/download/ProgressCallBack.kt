@@ -2,9 +2,8 @@ package com.app.basics.net.interceptor.download
 
 import android.util.Log
 import com.app.basics.bus.RxBus.Companion.default
-import com.app.basics.bus.RxSubscriptions.add
-import com.app.basics.bus.RxSubscriptions.remove
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import okhttp3.ResponseBody
 import java.io.*
@@ -15,6 +14,7 @@ import java.io.*
 abstract class ProgressCallBack<T>(// 本地文件存放路径
         private val destFileDir: String, // 文件名
         private val destFileName: String) {
+    private val mSubscriptions = CompositeDisposable()
     private var mSubscription: Disposable? = null
     abstract fun onSuccess(t: T)
     abstract fun progress(progress: Long, total: Long)
@@ -47,7 +47,7 @@ abstract class ProgressCallBack<T>(// 本地文件存放路径
             try {
                 `is`?.close()
                 fos?.close()
-                unsubscribe()
+                unSubscribe()
             } catch (e: IOException) {
                 Log.e("saveFile", e.message)
             }
@@ -62,14 +62,14 @@ abstract class ProgressCallBack<T>(// 本地文件存放路径
                 .observeOn(AndroidSchedulers.mainThread()) //回调到主线程更新UI
                 .subscribe { progressLoadBean -> progress(progressLoadBean.bytesLoaded, progressLoadBean.total) }
         //将订阅者加入管理站
-        add(mSubscription)
+        mSubscriptions.add(mSubscription!!)
     }
 
     /**
      * 取消订阅，防止内存泄漏
      */
-    fun unsubscribe() {
-        remove(mSubscription)
+    private fun unSubscribe() {
+        mSubscriptions.remove(mSubscription!!)
     }
 
     init {

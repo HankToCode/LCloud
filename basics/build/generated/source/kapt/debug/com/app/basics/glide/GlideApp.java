@@ -1,6 +1,5 @@
 package com.app.basics.glide;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -57,7 +56,6 @@ public final class GlideApp {
    */
   @Deprecated
   @VisibleForTesting
-  @SuppressLint("VisibleForTests")
   public static void init(Glide glide) {
     Glide.init(glide);
   }
@@ -66,7 +64,6 @@ public final class GlideApp {
    * @see Glide#init(Context, GlideBuilder)
    */
   @VisibleForTesting
-  @SuppressLint("VisibleForTests")
   public static void init(@NonNull Context context, @NonNull GlideBuilder builder) {
     Glide.init(context, builder);
   }
@@ -75,7 +72,6 @@ public final class GlideApp {
    * @see Glide#tearDown()
    */
   @VisibleForTesting
-  @SuppressLint("VisibleForTests")
   public static void tearDown() {
     Glide.tearDown();
   }

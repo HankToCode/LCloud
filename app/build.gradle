@@ -15,14 +15,16 @@ android {
             storePassword 'pa123456'
         }
     }
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     defaultConfig {
         applicationId "com.app.cloud"
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
                 includeCompileClasspath true
@@ -81,38 +83,15 @@ android {
     }
 
 
-    sourceSets {
-        main {
-            res.srcDirs = [
-                    'src/main/res/layout/activity',
-                    'src/main/res/layout/fragment',
-                    'src/main/res/layout/item',
-                    'src/main/res/layout/view',
-                    'src/main/res/layout/',
-                    'src/main/res'
-            ]
-        }
-    }
-
 }
 
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-//    testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-//    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1') {
-//        exclude group: 'com.android.support', module: 'support-annotations'
-//    }
 
     //basics库
     implementation project(':basics')
 
-    //multidex方案
-    implementation 'com.android.support:multidex:1.0.3'
-
-    //今日头条兼容适配方案
-    implementation 'me.jessyan:autosize:1.2.1'
 
 
 

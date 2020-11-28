@@ -3,12 +3,12 @@ package com.app.basics.glide;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.CheckResult;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.FloatRange;
 import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import androidx.annotation.CheckResult;
+import androidx.annotation.NonNull;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.DecodeFormat;
 import com.bumptech.glide.load.Key;
@@ -16,9 +16,11 @@ import com.bumptech.glide.load.Option;
 import com.bumptech.glide.load.Transformation;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.DownsampleStrategy;
+import com.bumptech.glide.request.BaseRequestOptions;
 import com.bumptech.glide.request.RequestOptions;
 import java.lang.Class;
 import java.lang.Cloneable;
+import java.lang.Deprecated;
 import java.lang.Override;
 import java.lang.SafeVarargs;
 import java.lang.SuppressWarnings;
@@ -56,7 +58,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions diskCacheStrategyOf(@NonNull DiskCacheStrategy strategy) {
+  public static GlideOptions diskCacheStrategyOf(@android.support.annotation.NonNull DiskCacheStrategy strategy) {
     return new GlideOptions().diskCacheStrategy(strategy);
   }
 
@@ -65,7 +67,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions priorityOf(@NonNull Priority priority) {
+  public static GlideOptions priorityOf(@android.support.annotation.NonNull Priority priority) {
     return new GlideOptions().priority(priority);
   }
 
@@ -138,7 +140,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions signatureOf(@NonNull Key key) {
+  public static GlideOptions signatureOf(@android.support.annotation.NonNull Key key) {
     return new GlideOptions().signature(key);
   }
 
@@ -199,7 +201,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions bitmapTransform(@NonNull Transformation<Bitmap> transformation) {
+  public static GlideOptions bitmapTransform(@android.support.annotation.NonNull Transformation<Bitmap> transformation) {
     return new GlideOptions().transform(transformation);
   }
 
@@ -221,7 +223,8 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static <T> GlideOptions option(@NonNull Option<T> option, @NonNull T t) {
+  public static <T> GlideOptions option(@android.support.annotation.NonNull Option<T> option,
+      @android.support.annotation.NonNull T t) {
     return new GlideOptions().set(option, t);
   }
 
@@ -230,7 +233,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions decodeTypeOf(@NonNull Class<?> clazz) {
+  public static GlideOptions decodeTypeOf(@android.support.annotation.NonNull Class<?> clazz) {
     return new GlideOptions().decode(clazz);
   }
 
@@ -239,7 +242,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions formatOf(@NonNull DecodeFormat format) {
+  public static GlideOptions formatOf(@android.support.annotation.NonNull DecodeFormat format) {
     return new GlideOptions().format(format);
   }
 
@@ -257,7 +260,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions downsampleOf(@NonNull DownsampleStrategy strategy) {
+  public static GlideOptions downsampleOf(@android.support.annotation.NonNull DownsampleStrategy strategy) {
     return new GlideOptions().downsample(strategy);
   }
 
@@ -284,7 +287,7 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
    */
   @CheckResult
   @NonNull
-  public static GlideOptions encodeFormatOf(@NonNull Bitmap.CompressFormat format) {
+  public static GlideOptions encodeFormatOf(@android.support.annotation.NonNull Bitmap.CompressFormat format) {
     return new GlideOptions().encodeFormat(format);
   }
 
@@ -302,318 +305,329 @@ public final class GlideOptions extends RequestOptions implements Cloneable {
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions sizeMultiplier(@FloatRange(from = 0.0, to = 1.0) float value) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions sizeMultiplier(@FloatRange(from = 0.0, to = 1.0) float value) {
     return (GlideOptions) super.sizeMultiplier(value);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions useUnlimitedSourceGeneratorsPool(boolean flag) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions useUnlimitedSourceGeneratorsPool(boolean flag) {
     return (GlideOptions) super.useUnlimitedSourceGeneratorsPool(flag);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions useAnimationPool(boolean flag) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions useAnimationPool(boolean flag) {
     return (GlideOptions) super.useAnimationPool(flag);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions onlyRetrieveFromCache(boolean flag) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions onlyRetrieveFromCache(boolean flag) {
     return (GlideOptions) super.onlyRetrieveFromCache(flag);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions diskCacheStrategy(@NonNull DiskCacheStrategy strategy) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions diskCacheStrategy(@android.support.annotation.NonNull DiskCacheStrategy strategy) {
     return (GlideOptions) super.diskCacheStrategy(strategy);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions priority(@NonNull Priority priority) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions priority(@android.support.annotation.NonNull Priority priority) {
     return (GlideOptions) super.priority(priority);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions placeholder(@Nullable Drawable drawable) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions placeholder(@Nullable Drawable drawable) {
     return (GlideOptions) super.placeholder(drawable);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions placeholder(@DrawableRes int id) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions placeholder(@DrawableRes int id) {
     return (GlideOptions) super.placeholder(id);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions fallback(@Nullable Drawable drawable) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions fallback(@Nullable Drawable drawable) {
     return (GlideOptions) super.fallback(drawable);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions fallback(@DrawableRes int id) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions fallback(@DrawableRes int id) {
     return (GlideOptions) super.fallback(id);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions error(@Nullable Drawable drawable) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions error(@Nullable Drawable drawable) {
     return (GlideOptions) super.error(drawable);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions error(@DrawableRes int id) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions error(@DrawableRes int id) {
     return (GlideOptions) super.error(id);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions theme(@Nullable Resources.Theme theme) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions theme(@Nullable Resources.Theme theme) {
     return (GlideOptions) super.theme(theme);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions skipMemoryCache(boolean skip) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions skipMemoryCache(boolean skip) {
     return (GlideOptions) super.skipMemoryCache(skip);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions override(int width, int height) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions override(int width, int height) {
     return (GlideOptions) super.override(width, height);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions override(int size) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions override(int size) {
     return (GlideOptions) super.override(size);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions signature(@NonNull Key key) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions signature(@android.support.annotation.NonNull Key key) {
     return (GlideOptions) super.signature(key);
   }
 
   @Override
-  @CheckResult
-  public final GlideOptions clone() {
+  @android.support.annotation.CheckResult
+  public GlideOptions clone() {
     return (GlideOptions) super.clone();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final <T> GlideOptions set(@NonNull Option<T> option, @NonNull T t) {
-    return (GlideOptions) super.set(option, t);
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public <Y> GlideOptions set(@android.support.annotation.NonNull Option<Y> option,
+      @android.support.annotation.NonNull Y y) {
+    return (GlideOptions) super.set(option, y);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions decode(@NonNull Class<?> clazz) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions decode(@android.support.annotation.NonNull Class<?> clazz) {
     return (GlideOptions) super.decode(clazz);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions encodeFormat(@NonNull Bitmap.CompressFormat format) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions encodeFormat(@android.support.annotation.NonNull Bitmap.CompressFormat format) {
     return (GlideOptions) super.encodeFormat(format);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions encodeQuality(@IntRange(from = 0, to = 100) int value) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions encodeQuality(@IntRange(from = 0, to = 100) int value) {
     return (GlideOptions) super.encodeQuality(value);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions frame(@IntRange(from = 0) long value) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions frame(@IntRange(from = 0) long value) {
     return (GlideOptions) super.frame(value);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions format(@NonNull DecodeFormat format) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions format(@android.support.annotation.NonNull DecodeFormat format) {
     return (GlideOptions) super.format(format);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions disallowHardwareConfig() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions disallowHardwareConfig() {
     return (GlideOptions) super.disallowHardwareConfig();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions downsample(@NonNull DownsampleStrategy strategy) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions downsample(@android.support.annotation.NonNull DownsampleStrategy strategy) {
     return (GlideOptions) super.downsample(strategy);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions timeout(@IntRange(from = 0) int value) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions timeout(@IntRange(from = 0) int value) {
     return (GlideOptions) super.timeout(value);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions optionalCenterCrop() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions optionalCenterCrop() {
     return (GlideOptions) super.optionalCenterCrop();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions centerCrop() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions centerCrop() {
     return (GlideOptions) super.centerCrop();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions optionalFitCenter() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions optionalFitCenter() {
     return (GlideOptions) super.optionalFitCenter();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions fitCenter() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions fitCenter() {
     return (GlideOptions) super.fitCenter();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions optionalCenterInside() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions optionalCenterInside() {
     return (GlideOptions) super.optionalCenterInside();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions centerInside() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions centerInside() {
     return (GlideOptions) super.centerInside();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions optionalCircleCrop() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions optionalCircleCrop() {
     return (GlideOptions) super.optionalCircleCrop();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions circleCrop() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions circleCrop() {
     return (GlideOptions) super.circleCrop();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions transform(@NonNull Transformation<Bitmap> transformation) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions transform(@android.support.annotation.NonNull Transformation<Bitmap> transformation) {
     return (GlideOptions) super.transform(transformation);
   }
 
   @Override
   @SafeVarargs
   @SuppressWarnings("varargs")
-  @NonNull
-  @CheckResult
-  public final GlideOptions transforms(@NonNull Transformation<Bitmap>... transformations) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public final GlideOptions transform(@android.support.annotation.NonNull Transformation<Bitmap>... transformations) {
+    return (GlideOptions) super.transform(transformations);
+  }
+
+  @Override
+  @SafeVarargs
+  @SuppressWarnings("varargs")
+  @Deprecated
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public final GlideOptions transforms(@android.support.annotation.NonNull Transformation<Bitmap>... transformations) {
     return (GlideOptions) super.transforms(transformations);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions optionalTransform(@NonNull Transformation<Bitmap> transformation) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions optionalTransform(@android.support.annotation.NonNull Transformation<Bitmap> transformation) {
     return (GlideOptions) super.optionalTransform(transformation);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final <T> GlideOptions optionalTransform(@NonNull Class<T> clazz,
-      @NonNull Transformation<T> transformation) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public <Y> GlideOptions optionalTransform(@android.support.annotation.NonNull Class<Y> clazz,
+      @android.support.annotation.NonNull Transformation<Y> transformation) {
     return (GlideOptions) super.optionalTransform(clazz, transformation);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final <T> GlideOptions transform(@NonNull Class<T> clazz,
-      @NonNull Transformation<T> transformation) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public <Y> GlideOptions transform(@android.support.annotation.NonNull Class<Y> clazz,
+      @android.support.annotation.NonNull Transformation<Y> transformation) {
     return (GlideOptions) super.transform(clazz, transformation);
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions dontTransform() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions dontTransform() {
     return (GlideOptions) super.dontTransform();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions dontAnimate() {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions dontAnimate() {
     return (GlideOptions) super.dontAnimate();
   }
 
   @Override
-  @NonNull
-  @CheckResult
-  public final GlideOptions apply(@NonNull RequestOptions options) {
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
+  public GlideOptions apply(@android.support.annotation.NonNull BaseRequestOptions<?> options) {
     return (GlideOptions) super.apply(options);
   }
 
   @Override
-  @NonNull
-  public final GlideOptions lock() {
+  @android.support.annotation.NonNull
+  public GlideOptions lock() {
     return (GlideOptions) super.lock();
   }
 
   @Override
-  @NonNull
-  public final GlideOptions autoClone() {
+  @android.support.annotation.NonNull
+  public GlideOptions autoClone() {
     return (GlideOptions) super.autoClone();
   }
 }

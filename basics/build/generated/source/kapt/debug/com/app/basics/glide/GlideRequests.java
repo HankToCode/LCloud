@@ -4,16 +4,17 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.annotation.CheckResult;
 import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RawRes;
+import androidx.annotation.CheckResult;
+import androidx.annotation.NonNull;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.manager.Lifecycle;
 import com.bumptech.glide.manager.RequestManagerTreeNode;
+import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import java.io.File;
 import java.lang.Class;
@@ -47,117 +48,123 @@ public class GlideRequests extends RequestManager {
 
   @Override
   @NonNull
-  public GlideRequests applyDefaultRequestOptions(@NonNull RequestOptions options) {
+  public synchronized GlideRequests applyDefaultRequestOptions(@android.support.annotation.NonNull RequestOptions options) {
     return (GlideRequests) super.applyDefaultRequestOptions(options);
   }
 
   @Override
   @NonNull
-  public GlideRequests setDefaultRequestOptions(@NonNull RequestOptions options) {
+  public synchronized GlideRequests setDefaultRequestOptions(@android.support.annotation.NonNull RequestOptions options) {
     return (GlideRequests) super.setDefaultRequestOptions(options);
   }
 
   @Override
   @NonNull
-  @CheckResult
+  public GlideRequests addDefaultRequestListener(RequestListener<Object> listener) {
+    return (GlideRequests) super.addDefaultRequestListener(listener);
+  }
+
+  @Override
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Bitmap> asBitmap() {
     return (GlideRequest<Bitmap>) super.asBitmap();
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<GifDrawable> asGif() {
     return (GlideRequest<GifDrawable>) super.asGif();
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> asDrawable() {
     return (GlideRequest<Drawable>) super.asDrawable();
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable Bitmap bitmap) {
     return (GlideRequest<Drawable>) super.load(bitmap);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable Drawable drawable) {
     return (GlideRequest<Drawable>) super.load(drawable);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable String string) {
     return (GlideRequest<Drawable>) super.load(string);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable Uri uri) {
     return (GlideRequest<Drawable>) super.load(uri);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable File file) {
     return (GlideRequest<Drawable>) super.load(file);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@RawRes @DrawableRes @Nullable Integer id) {
     return (GlideRequest<Drawable>) super.load(id);
   }
 
   @Override
   @Deprecated
-  @CheckResult
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable URL url) {
     return (GlideRequest<Drawable>) super.load(url);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable byte[] bytes) {
     return (GlideRequest<Drawable>) super.load(bytes);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<Drawable> load(@Nullable Object o) {
     return (GlideRequest<Drawable>) super.load(o);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<File> downloadOnly() {
     return (GlideRequest<File>) super.downloadOnly();
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<File> download(@Nullable Object o) {
     return (GlideRequest<File>) super.download(o);
   }
 
   @Override
-  @NonNull
-  @CheckResult
+  @android.support.annotation.NonNull
+  @android.support.annotation.CheckResult
   public GlideRequest<File> asFile() {
     return (GlideRequest<File>) super.asFile();
   }

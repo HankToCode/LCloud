@@ -1,4 +1,9 @@
 <resources>
 
-    
+    <string name="login_tip">输入您的账号密码</string>
+    <string name="login_account_tip">请输入账号</string>
+    <string name="please_enter_login_pwd">请输入您的密码</string>
+    <string name="login_str">登录</string>
+
+
 </resources>

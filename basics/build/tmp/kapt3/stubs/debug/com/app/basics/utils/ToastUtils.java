@@ -42,7 +42,7 @@ public final class ToastUtils {
          *
          * @param layoutId 视图
          */
-        public final void setView(@android.support.annotation.LayoutRes()
+        public final void setView(@androidx.annotation.LayoutRes()
         int layoutId) {
         }
         
@@ -65,7 +65,7 @@ public final class ToastUtils {
          *
          * @param backgroundColor 背景色
          */
-        public final void setBackgroundColor(@android.support.annotation.ColorInt()
+        public final void setBackgroundColor(@androidx.annotation.ColorInt()
         int backgroundColor) {
         }
         
@@ -74,7 +74,7 @@ public final class ToastUtils {
          *
          * @param bgResource 背景资源
          */
-        public final void setBgResource(@android.support.annotation.DrawableRes()
+        public final void setBgResource(@androidx.annotation.DrawableRes()
         int bgResource) {
         }
         
@@ -83,7 +83,7 @@ public final class ToastUtils {
          *
          * @param messageColor 颜色
          */
-        public final void setMessageColor(@android.support.annotation.ColorInt()
+        public final void setMessageColor(@androidx.annotation.ColorInt()
         int messageColor) {
         }
         
@@ -101,7 +101,7 @@ public final class ToastUtils {
          *
          * @param resId 资源Id
          */
-        public final void showShortSafe(@android.support.annotation.StringRes()
+        public final void showShortSafe(@androidx.annotation.StringRes()
         int resId) {
         }
         
@@ -111,7 +111,7 @@ public final class ToastUtils {
          * @param resId 资源Id
          * @param args  参数
          */
-        public final void showShortSafe(@android.support.annotation.StringRes()
+        public final void showShortSafe(@androidx.annotation.StringRes()
         int resId, @org.jetbrains.annotations.NotNull()
         java.lang.Object... args) {
         }
@@ -141,7 +141,7 @@ public final class ToastUtils {
          *
          * @param resId 资源Id
          */
-        public final void showLongSafe(@android.support.annotation.StringRes()
+        public final void showLongSafe(@androidx.annotation.StringRes()
         int resId) {
         }
         
@@ -151,7 +151,7 @@ public final class ToastUtils {
          * @param resId 资源Id
          * @param args  参数
          */
-        public final void showLongSafe(@android.support.annotation.StringRes()
+        public final void showLongSafe(@androidx.annotation.StringRes()
         int resId, @org.jetbrains.annotations.NotNull()
         java.lang.Object... args) {
         }
@@ -181,7 +181,7 @@ public final class ToastUtils {
          *
          * @param resId 资源Id
          */
-        public final void showShort(@android.support.annotation.StringRes()
+        public final void showShort(@androidx.annotation.StringRes()
         int resId) {
         }
         
@@ -191,7 +191,7 @@ public final class ToastUtils {
          * @param resId 资源Id
          * @param args  参数
          */
-        public final void showShort(@android.support.annotation.StringRes()
+        public final void showShort(@androidx.annotation.StringRes()
         int resId, @org.jetbrains.annotations.NotNull()
         java.lang.Object... args) {
         }
@@ -221,7 +221,7 @@ public final class ToastUtils {
          *
          * @param resId 资源Id
          */
-        public final void showLong(@android.support.annotation.StringRes()
+        public final void showLong(@androidx.annotation.StringRes()
         int resId) {
         }
         
@@ -231,7 +231,7 @@ public final class ToastUtils {
          * @param resId 资源Id
          * @param args  参数
          */
-        public final void showLong(@android.support.annotation.StringRes()
+        public final void showLong(@androidx.annotation.StringRes()
         int resId, @org.jetbrains.annotations.NotNull()
         java.lang.Object... args) {
         }
@@ -277,7 +277,7 @@ public final class ToastUtils {
          * @param resId    资源Id
          * @param duration 显示时长
          */
-        private final void show(@android.support.annotation.StringRes()
+        private final void show(@androidx.annotation.StringRes()
         int resId, int duration) {
         }
         
@@ -288,7 +288,7 @@ public final class ToastUtils {
          * @param duration 显示时长
          * @param args     参数
          */
-        private final void show(@android.support.annotation.StringRes()
+        private final void show(@androidx.annotation.StringRes()
         int resId, int duration, java.lang.Object... args) {
         }
         

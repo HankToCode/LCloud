@@ -29,7 +29,7 @@ public final class StatusBarUtil {
         }
         
         public final void immersive(@org.jetbrains.annotations.NotNull()
-        android.app.Activity activity, int color, @android.support.annotation.FloatRange(from = 0.0, to = 1.0)
+        android.app.Activity activity, int color, @androidx.annotation.FloatRange(from = 0.0, to = 1.0)
         float alpha) {
         }
         
@@ -46,7 +46,7 @@ public final class StatusBarUtil {
         }
         
         public final void immersive(@org.jetbrains.annotations.NotNull()
-        android.view.Window window, int color, @android.support.annotation.FloatRange(from = 0.0, to = 1.0)
+        android.view.Window window, int color, @androidx.annotation.FloatRange(from = 0.0, to = 1.0)
         float alpha) {
         }
         
@@ -67,7 +67,7 @@ public final class StatusBarUtil {
         }
         
         public final void darkMode(@org.jetbrains.annotations.NotNull()
-        android.app.Activity activity, int color, @android.support.annotation.FloatRange(from = 0.0, to = 1.0)
+        android.app.Activity activity, int color, @androidx.annotation.FloatRange(from = 0.0, to = 1.0)
         float alpha) {
         }
         
@@ -76,14 +76,14 @@ public final class StatusBarUtil {
          */
         @android.annotation.TargetApi(value = android.os.Build.VERSION_CODES.M)
         public final void darkMode(@org.jetbrains.annotations.NotNull()
-        android.view.Window window, int color, @android.support.annotation.FloatRange(from = 0.0, to = 1.0)
+        android.view.Window window, int color, @androidx.annotation.FloatRange(from = 0.0, to = 1.0)
         float alpha) {
         }
         
         /**
          * android 6.0设置字体颜色
          */
-        @android.support.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.M)
+        @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.M)
         public final void darkModeForM(@org.jetbrains.annotations.NotNull()
         android.view.Window window, boolean dark) {
         }
@@ -142,11 +142,11 @@ public final class StatusBarUtil {
          * 创建假的透明栏
          */
         public final void setTranslucentView(@org.jetbrains.annotations.NotNull()
-        android.view.ViewGroup container, int color, @android.support.annotation.FloatRange(from = 0.0, to = 1.0)
+        android.view.ViewGroup container, int color, @androidx.annotation.FloatRange(from = 0.0, to = 1.0)
         float alpha) {
         }
         
-        public final int mixtureColor(int color, @android.support.annotation.FloatRange(from = 0.0, to = 1.0)
+        public final int mixtureColor(int color, @androidx.annotation.FloatRange(from = 0.0, to = 1.0)
         float alpha) {
             return 0;
         }

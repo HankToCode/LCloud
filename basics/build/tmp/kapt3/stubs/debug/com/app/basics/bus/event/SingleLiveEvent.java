@@ -20,14 +20,14 @@ public class SingleLiveEvent<T extends java.lang.Object> extends android.arch.li
     private static final java.lang.String TAG = "SingleLiveEvent";
     public static final com.app.basics.bus.event.SingleLiveEvent.Companion Companion = null;
     
-    @android.support.annotation.MainThread()
+    @androidx.annotation.MainThread()
     @java.lang.Override()
     public void observe(@org.jetbrains.annotations.NotNull()
     android.arch.lifecycle.LifecycleOwner owner, @org.jetbrains.annotations.NotNull()
     android.arch.lifecycle.Observer<T> observer) {
     }
     
-    @android.support.annotation.MainThread()
+    @androidx.annotation.MainThread()
     @java.lang.Override()
     public void setValue(@org.jetbrains.annotations.Nullable()
     T t) {
@@ -36,7 +36,7 @@ public class SingleLiveEvent<T extends java.lang.Object> extends android.arch.li
     /**
      * Used for cases where T is Void, to make calls cleaner.
      */
-    @android.support.annotation.MainThread()
+    @androidx.annotation.MainThread()
     public final void call() {
     }
     

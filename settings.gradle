@@ -1,2 +1,1 @@
-include ':app', ':multiple-status-view'
-include ':basics'
+include ':app',':basics'

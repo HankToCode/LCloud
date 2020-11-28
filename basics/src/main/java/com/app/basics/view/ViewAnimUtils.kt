@@ -1,16 +1,16 @@
-package com.app.cloud.view
+package com.app.basics.view
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.annotation.TargetApi
 import android.content.Context
 import android.os.Build
-import android.support.annotation.ColorRes
-import android.support.annotation.RequiresApi
-import android.support.v4.content.ContextCompat
 import android.view.View
 import android.view.ViewAnimationUtils
 import android.view.animation.AccelerateDecelerateInterpolator
+import androidx.annotation.ColorRes
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 
 /**
  * Created by HankGreen on 2017/12/1.

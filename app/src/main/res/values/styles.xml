@@ -1,5 +1,22 @@
 <resources>
 
+    <style name="BackStyle">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:src">@mipmap/icon_back</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <!--<item name="android:onClick">back</item>-->
+    </style>
+
+    <style name="OrangeButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/orange_and_gray_selector_bg</item>
+        <item name="android:textColor">@drawable/white_and_gray_selector_text_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 
 
 </resources>

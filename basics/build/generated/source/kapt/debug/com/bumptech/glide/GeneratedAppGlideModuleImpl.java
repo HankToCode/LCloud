@@ -1,8 +1,8 @@
 package com.bumptech.glide;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.util.Log;
+import androidx.annotation.NonNull;
 import com.app.basics.glide.CustomAppGlideModule;
 import com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule;
 import java.lang.Class;

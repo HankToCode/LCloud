@@ -1,6 +1,6 @@
 package com.app.basics.utils.constant
 
-import android.support.annotation.IntDef
+import androidx.annotation.IntDef
 
 /**
  * Created by HankGreen on 2017/5/14.
