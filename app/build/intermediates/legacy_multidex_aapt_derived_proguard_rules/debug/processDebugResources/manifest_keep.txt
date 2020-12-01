@@ -1,0 +1,4 @@
+# Referenced at /Users/zhangrongdong/Desktop/IdeaFast/LCloud/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:36
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at /Users/zhangrongdong/Desktop/IdeaFast/LCloud/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:36
+-keep class com.app.basics.MyApplication { <init>(); }
