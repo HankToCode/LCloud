@@ -1,2 +1,0 @@
-# Referenced at /Users/zhangrongdong/Desktop/IdeaFast/LCloud/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:23
--keep class com.app.basics.MyApplication { <init>(); }
