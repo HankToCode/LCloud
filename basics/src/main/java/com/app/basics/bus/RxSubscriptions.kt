@@ -6,19 +6,21 @@ import io.reactivex.disposables.Disposable
 /**
  * 管理 CompositeSubscription
  */
-object RxSubscriptions {
+class RxSubscriptions {
     private val mSubscriptions = CompositeDisposable()
     val isDisposed: Boolean
         get() = mSubscriptions.isDisposed
 
-    @JvmStatic
     fun add(s: Disposable?) {
         if (s != null) {
             mSubscriptions.add(s)
         }
     }
 
-    @JvmStatic
+    fun add(vararg s: Disposable?) {
+        mSubscriptions.addAll(*s)
+    }
+
     fun remove(s: Disposable?) {
         if (s != null) {
             mSubscriptions.remove(s)
@@ -32,4 +34,7 @@ object RxSubscriptions {
     fun dispose() {
         mSubscriptions.dispose()
     }
+
+
+
 }

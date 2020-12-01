@@ -1,13 +1,13 @@
 package com.app.basics.base
 
+import android.R
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
-import com.gyf.immersionbar.ImmersionBar
 import com.app.basics.MyApplication
+import com.gyf.immersionbar.ImmersionBar
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
 import io.reactivex.annotations.NonNull
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
@@ -18,7 +18,7 @@ import pub.devrel.easypermissions.EasyPermissions
  * created: 2017/10/25
  * desc:BaseActivity基类
  */
-abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
+abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +31,6 @@ abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCal
         start()
 
 
-    }
-
-
-    open val mRetryClickListener: View.OnClickListener = View.OnClickListener {
-        start()
     }
 
     /**

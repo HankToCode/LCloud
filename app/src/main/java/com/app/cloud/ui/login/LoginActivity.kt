@@ -1,15 +1,21 @@
 package com.app.cloud.ui.login
 
-import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import com.app.basics.base.BaseActivity
 import com.app.cloud.R
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun layoutId(): Int = R.layout.activity_login
 
-        setContentView(R.layout.activity_login)
+    override fun initData() {
+
+    }
+
+    override fun initView() {
+
+    }
+
+    override fun start() {
 
     }
 
