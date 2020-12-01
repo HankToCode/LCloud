@@ -6,32 +6,6 @@
 
     <color name="layout_toolbar_title">#222222</color>
 
-    <color name="color_33">#333333</color>
-    <color name="color_66">#666666</color>
-    <color name="color_99">#999999</color>
-    <color name="color_977c58">#977C58</color>
-    <color name="color_288de1">#288DE1</color>
-    <color name="color_d1fef9f5">#d1fef9f5</color>
-    <color name="color_dd">#dddddd</color>
-    <color name="color_f6">#F6F6F6</color>
-    <color name="color_71a800">#71A800</color>
-    <color name="color_ea2870">#EA2870</color>
-    <color name="color_f7aa3c">#F7AA3C</color>
-    <color name="color_5b91e5">#5b91e5</color>
-    <color name="color_282828">#282828</color>
-    <color name="color_222222">#222222</color>
-    <color name="color_333333">#333333</color>
-    <color name="color_666666">#666666</color>
-    <color name="color_f8f8f8">#f8f8f8</color>
-    <color name="color_999999">#999999</color>
-    <color name="color_fff27f4d">#fff27f4d</color>
-    <color name="color_ffef4327">#ffef4327</color>
-    <color name="color_44f27f4d">#44f27f4d</color>
-    <color name="color_44ef4327">#44ef4327</color>
 
-    <!-- 主横线颜色 -->
-    <color name="main_view_line_color">@color/color_f8f8f8</color>
-    <color name="text_main_color">@color/color_222222</color>
-    <color name="text_assistant_color">@color/color_999999</color>
 
 </resources>

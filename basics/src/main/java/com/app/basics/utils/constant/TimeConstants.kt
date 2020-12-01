@@ -1,6 +1,8 @@
-package com.app.basics.utils.constant
+package com.lt.basics.utils.constant
 
-import androidx.annotation.IntDef
+import android.support.annotation.IntDef
+import java.lang.annotation.Retention
+import java.lang.annotation.RetentionPolicy
 
 /**
  * Created by HankGreen on 2017/5/14.
@@ -29,6 +31,6 @@ object TimeConstants {
     const val DAY = 86400000
 
     @IntDef(MSEC, SEC, MIN, HOUR, DAY)
-    @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
+    @Retention(RetentionPolicy.SOURCE)
     annotation class Unit
 }

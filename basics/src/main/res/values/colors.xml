@@ -23,6 +23,9 @@
     <color name="color_orange">#dd2c00</color>
     <color name="color_blue_dark">#ee447AA4</color>
 
+
+
+
     <!-- title 半透明背景颜色 -->
     <color name="color_title_bg">#CCFFFFFF</color>
     <!-- 默认背景色 -->
@@ -41,7 +44,7 @@
     <color name="color_darker_gray">#aaa</color>
 
     <color name="color_division_line">@color/color_lighter_gray</color>
-
+    
     <color name="color_translucent">#00000000</color>
 
     <color name="color_aquamarine">#7FFFD4</color>

@@ -24,7 +24,12 @@
     <!-- ************************** 公共间距 end **************************************-->
 
 
+
     <dimen name="layout_toolbar_height">44dp</dimen>
+    <dimen name="layout_title_height">44dp</dimen>
+    <dimen name="layout_title_padding_start">10dp</dimen>
+    <dimen name="layout_title_padding_end">10dp</dimen>
+
 
 
 
