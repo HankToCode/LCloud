@@ -12,14 +12,14 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int realtimeBlurRadius = 0x7f030156;
-        public static final int realtimeDownsampleFactor = 0x7f030157;
-        public static final int realtimeOverlayColor = 0x7f030158;
+        public static final int realtimeBlurRadius = 0x7f03018e;
+        public static final int realtimeDownsampleFactor = 0x7f03018f;
+        public static final int realtimeOverlayColor = 0x7f030190;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] RealtimeBlurView = { 0x7f030156, 0x7f030157, 0x7f030158 };
+        public static final int[] RealtimeBlurView = { 0x7f03018e, 0x7f03018f, 0x7f030190 };
         public static final int RealtimeBlurView_realtimeBlurRadius = 0;
         public static final int RealtimeBlurView_realtimeDownsampleFactor = 1;
         public static final int RealtimeBlurView_realtimeOverlayColor = 2;

@@ -8,19 +8,13 @@
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="27" />
-
     <!-- 获取GSM网络信息状态，如当前的网络连接是否有效 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 允许访问Wi-Fi网络状态信息 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 允许获取Wi-Fi网络状态改变信息 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!-- 访问网络 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 读取手机状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许获取Wi-Fi网络状态改变信息 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 读取手机状态 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
-    <!-- SD 卡读写权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" /> <!-- SD 卡读写权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -38,7 +32,6 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
         <meta-data
             android:name="design_width_in_dp"
@@ -50,10 +43,10 @@
             android:name="android.max_aspect"
             android:value="2.4" />
 
-        <!-- 交易中心 -->
+        <!-- 登录 -->
         <activity
-            android:name="com.app.cloud.ui.main.activity.TradingCenterActivity"
-            android:screenOrientation="portrait" >
+            android:name="com.app.cloud.ui.login.LoginActivity"
+            android:label="@string/title_activity_login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -120,6 +113,12 @@
             android:roundIcon="@mipmap/leak_canary_icon"
             android:taskAffinity="com.squareup.leakcanary.com.app.cloud"
             android:theme="@style/leak_canary_Theme.Transparent" />
+
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.app.cloud.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

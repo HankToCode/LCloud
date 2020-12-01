@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/LCloud.iml" filepath="$PROJECT_DIR$/LCloud.iml" group="LCloud" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="LCloud/app" />
       <module fileurl="file://$PROJECT_DIR$/basics/basics.iml" filepath="$PROJECT_DIR$/basics/basics.iml" group="LCloud/basics" />
-      <module fileurl="file://$PROJECT_DIR$/multiple-status-view/multiple-status-view.iml" filepath="$PROJECT_DIR$/multiple-status-view/multiple-status-view.iml" group="LCloud/multiple-status-view" />
     </modules>
   </component>
 </project>

@@ -47,17 +47,17 @@ public final class R {
         public static final int accordion = 0x7f080015;
         public static final int alpha = 0x7f08002d;
         public static final int banner_indicatorId = 0x7f080031;
-        public static final int cube = 0x7f080047;
-        public static final int defaultEffect = 0x7f08004b;
-        public static final int depth = 0x7f08004d;
-        public static final int fade = 0x7f080065;
-        public static final int flip = 0x7f08006c;
-        public static final int rotate = 0x7f0800b5;
-        public static final int stack = 0x7f0800de;
-        public static final int zoom = 0x7f080115;
-        public static final int zoomCenter = 0x7f080116;
-        public static final int zoomFade = 0x7f080117;
-        public static final int zoomStack = 0x7f080118;
+        public static final int cube = 0x7f080048;
+        public static final int defaultEffect = 0x7f08004c;
+        public static final int depth = 0x7f08004e;
+        public static final int fade = 0x7f080061;
+        public static final int flip = 0x7f080068;
+        public static final int rotate = 0x7f0800aa;
+        public static final int stack = 0x7f0800da;
+        public static final int zoom = 0x7f080102;
+        public static final int zoomCenter = 0x7f080103;
+        public static final int zoomFade = 0x7f080104;
+        public static final int zoomStack = 0x7f080105;
     }
     public static final class layout {
         private layout() {}

@@ -59,14 +59,13 @@ dependencies {
     }
 
     //smartRefreshLayout 下拉刷新
-    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
-    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
     //Banner
     api 'cn.bingoogolapple:bga-banner:2.2.4@aar'
 
     //Google开源的一个布局控件
     api 'com.google.android:flexbox:1.0.0'
-    api project(':multiple-status-view')
     //模糊透明 View
     api 'com.github.mmin18:realtimeblurview:1.1.0'
     //leakCanary

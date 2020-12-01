@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
-import com.classic.common.MultipleStatusView
 import com.gyf.immersionbar.ImmersionBar
 import com.app.basics.MyApplication
 import io.reactivex.annotations.NonNull
@@ -20,10 +19,6 @@ import pub.devrel.easypermissions.EasyPermissions
  * desc:BaseActivity基类
  */
 abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
-    /**
-     * 多种状态的 View 的切换
-     */
-    protected var mLayoutStatusView: MultipleStatusView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,14 +29,10 @@ abstract class BaseActivity : AppCompatActivity(), EasyPermissions.PermissionCal
         initData()
         initView()
         start()
-        initListener()
 
 
     }
 
-    private fun initListener() {
-        mLayoutStatusView?.setOnClickListener(mRetryClickListener)
-    }
 
     open val mRetryClickListener: View.OnClickListener = View.OnClickListener {
         start()
