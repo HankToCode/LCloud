@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Dec 01 15:53:23 CST 2020
+#Tue Dec 01 16:57:05 CST 2020
 17.baseType=DIRECTORY
 4.path=classes.dex
 25.base=/Users/zhangrongdong/Desktop/IdeaFast/LCloud/app/build/intermediates/transforms/stripDebugSymbol/debug/0

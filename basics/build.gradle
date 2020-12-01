@@ -13,8 +13,7 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
 
-//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-//        consumerProguardFiles 'consumer-rules.pro'
+        buildConfigField "boolean", "PROJECT_DEBUG", "$PROJECT_DEBUG"
     }
 
     buildTypes {

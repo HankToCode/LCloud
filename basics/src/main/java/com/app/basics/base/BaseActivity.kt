@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
+import com.app.basics.Constants
 import com.app.basics.MyApplication
 import com.gyf.immersionbar.ImmersionBar
+import com.orhanobut.logger.Logger
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
 import io.reactivex.annotations.NonNull
 import pub.devrel.easypermissions.AppSettingsDialog
@@ -80,7 +82,7 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
      * @param perms       申请的权限的名字
      */
     override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
-        Log.i("EasyPermissions", "获取成功的权限$perms")
+        Logger.i("获取成功的权限$perms")
     }
 
     /**

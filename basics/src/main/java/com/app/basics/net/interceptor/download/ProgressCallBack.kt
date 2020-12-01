@@ -2,8 +2,7 @@ package com.app.basics.net.interceptor.download
 
 import android.util.Log
 import com.app.basics.bus.RxBus.Companion.default
-import com.app.basics.bus.RxSubscriptions.add
-import com.app.basics.bus.RxSubscriptions.remove
+import com.app.basics.bus.RxSubscriptions
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import okhttp3.ResponseBody
@@ -54,6 +53,8 @@ abstract class ProgressCallBack<T>(// 本地文件存放路径
         }
     }
 
+    private val rxSubscriber = RxSubscriptions()
+
     /**
      * 订阅加载的进度条
      */
@@ -62,14 +63,14 @@ abstract class ProgressCallBack<T>(// 本地文件存放路径
                 .observeOn(AndroidSchedulers.mainThread()) //回调到主线程更新UI
                 .subscribe { progressLoadBean -> progress(progressLoadBean.bytesLoaded, progressLoadBean.total) }
         //将订阅者加入管理站
-        add(mSubscription)
+        rxSubscriber.add(mSubscription)
     }
 
     /**
      * 取消订阅，防止内存泄漏
      */
     fun unsubscribe() {
-        remove(mSubscription)
+        rxSubscriber.remove(mSubscription)
     }
 
     init {

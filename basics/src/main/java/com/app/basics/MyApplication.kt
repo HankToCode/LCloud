@@ -19,13 +19,13 @@ import kotlin.properties.Delegates
  *
  */
 
-class MyApplication : Application(){
+class MyApplication : Application() {
 
     private var refWatcher: RefWatcher? = null
 
     companion object {
 
-        private val TAG = "MyApplication"
+        private const val TAG = "MyApplication"
 
         var context: Context by Delegates.notNull()
             private set
@@ -56,7 +56,8 @@ class MyApplication : Application(){
 
 
     /**
-     * 初始化配置
+     * 初始化Logger配置
+     * 仅负责打印些亮眼的Log信息，关于json回调信息则不建议使用
      */
     private fun initConfig() {
 
@@ -64,23 +65,26 @@ class MyApplication : Application(){
                 .showThreadInfo(false)  // 隐藏线程信息 默认：显示
                 .methodCount(0)         // 决定打印多少行（每一行代表一个方法）默认：2
                 .methodOffset(7)        // (Optional) Hides internal method calls up to offset. Default 5
-                .tag("hao_zz")   // (Optional) Global tag for every log. Default PRETTY_LOGGER
+                .tag(Constants.TAG_LOGGER)   // (Optional) Global tag for every log. Default PRETTY_LOGGER
                 .build()
         Logger.addLogAdapter(object : AndroidLogAdapter(formatStrategy) {
             override fun isLoggable(priority: Int, tag: String?): Boolean {
-                return BuildConfig.DEBUG
+                return BuildConfig.PROJECT_DEBUG
             }
         })
     }
 
 
+    /**
+     * 监听activity生命周期的回调
+     */
     private val mActivityLifecycleCallbacks = object : Application.ActivityLifecycleCallbacks {
         override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-            Log.d(TAG, "onCreated: " + activity.componentName.className)
+            Logger.d("onCreated: " + activity.componentName.className)
         }
 
         override fun onActivityStarted(activity: Activity) {
-            Log.d(TAG, "onStart: " + activity.componentName.className)
+            Logger.d("onStart: " + activity.componentName.className)
         }
 
         override fun onActivityResumed(activity: Activity) {
@@ -100,7 +104,7 @@ class MyApplication : Application(){
         }
 
         override fun onActivityDestroyed(activity: Activity) {
-            Log.d(TAG, "onDestroy: " + activity.componentName.className)
+            Logger.d("onDestroy: " + activity.componentName.className)
         }
     }
 
