@@ -7,6 +7,7 @@ import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 /**
+ * 精致的Loggin拦截器，但是不适合复制黏贴
  * @author ihsan on 09/02/2017.
  */
 class LoggingInterceptor private constructor(private val builder: Builder) : Interceptor {

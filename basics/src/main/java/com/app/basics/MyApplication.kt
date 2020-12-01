@@ -25,8 +25,6 @@ class MyApplication : Application() {
 
     companion object {
 
-        private const val TAG = "MyApplication"
-
         var context: Context by Delegates.notNull()
             private set
 
