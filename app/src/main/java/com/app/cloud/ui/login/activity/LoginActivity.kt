@@ -2,10 +2,8 @@ package com.app.cloud.ui.login.activity
 
 import android.annotation.SuppressLint
 import com.app.basics.base.BaseActivity
-import com.app.basics.utils.StatusBarUtil
 import com.app.cloud.R
 import com.app.cloud.mvp.presenter.TradingCenterPresenter
-import kotlinx.android.synthetic.main.layout_toolbar.*
 
 /**
  * Created by HankGreen on 2020/3/20.
@@ -30,7 +28,6 @@ class LoginActivity : BaseActivity() {
      * 初始化标题栏
      */
     private fun initToolbar() {
-        StatusBarUtil.setPaddingSmart(this, toolbar)
 
     }
 

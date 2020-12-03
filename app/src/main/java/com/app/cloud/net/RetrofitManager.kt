@@ -11,7 +11,6 @@ import com.app.cloud.api.ApiService
 import com.app.cloud.api.UrlConstant
 import okhttp3.*
 import okhttp3.internal.platform.Platform
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -106,10 +105,6 @@ object RetrofitManager {
     }
 
     private fun getOkHttpClient(): OkHttpClient {
-        //添加一个log拦截器,打印所有的log
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
-        //可以设置请求过滤的水平,body,basic,headers
-        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
 
         //设置 请求的缓存的大小跟位置
         val cacheFile = File(MyApplication.context.cacheDir, "cache")
