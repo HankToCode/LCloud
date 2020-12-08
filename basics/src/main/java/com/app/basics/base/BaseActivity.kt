@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import com.app.basics.MyApplication
 import com.app.basics.bus.RxSubscriptions
+import com.qmuiteam.qmui.util.QMUIStatusBarHelper
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity
 import io.reactivex.annotations.NonNull
 import io.reactivex.disposables.Disposable
@@ -27,10 +28,14 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        QMUIStatusBarHelper.translucent(this)
+        QMUIStatusBarHelper.setStatusBarDarkMode(this)
         setContentView(layoutId())
 
         AppManager.appManager?.addActivity(this)
         rxSubscriptions = RxSubscriptions()
+
         initData()
         initView()
         start()

@@ -23,13 +23,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="100dp"
         android:text="@string/login_tip"
         android:textColor="@color/color_333333"
         android:textSize="26sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <com.app.cloud.view.CommonTitleView
+        android:id="@+id/llCommonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/llPhone"
@@ -46,15 +51,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@mipmap/login_icon_phone"
-            android:paddingRight="5dp" />
-
-        <View
-            android:id="@+id/viewLine"
-            android:layout_width="1dp"
-            android:layout_height="15dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/main_view_line_color" />
+            android:paddingRight="5dp"
+            android:src="@mipmap/login_icon_phone" />
 
         <EditText
             android:id="@+id/editPhone"
@@ -108,11 +106,20 @@
             android:hint="@string/please_enter_login_pwd"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
-            android:paddingLeft="5dp"
             android:maxLength="16"
+            android:paddingLeft="5dp"
             android:textColor="@color/text_main_color"
             android:textColorHint="@color/text_assistant_color"
             android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/ivLook"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|end"
+            android:paddingLeft="5dp"
+            android:src="@mipmap/task_icon_eye_p"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/ivClearPass"
@@ -123,22 +130,6 @@
             android:src="@mipmap/login_icon_close_n"
             android:visibility="gone" />
 
-        <View
-            android:id="@+id/viewLine1"
-            android:layout_width="1dp"
-            android:layout_height="15dp"
-            android:visibility="gone"
-            android:layout_gravity="center_vertical"
-            android:background="@color/main_view_line_color" />
-
-        <ImageView
-            android:id="@+id/ivLook"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center|end"
-            android:paddingLeft="5dp"
-            android:src="@mipmap/login_icon_close_n"
-            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -173,16 +164,15 @@
         android:id="@+id/tvLogin"
         style="@style/OrangeButtonStyle"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="28dp"
         android:enabled="false"
         android:gravity="center"
         android:text="@string/login_str"
-        app:layout_constraintTop_toBottomOf="@id/llPassword"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

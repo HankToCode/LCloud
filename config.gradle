@@ -105,7 +105,19 @@ ext {
             //奔溃拦截
             "defense_crash"                : "com.tonystark.android:defense_crash:2.0.0",
             //验证码/密码输入框
-            "SeparatedEditText"            : "com.github.WGwangguan:SeparatedEditText:1.2"
+            "SeparatedEditText"            : "com.github.WGwangguan:SeparatedEditText:1.2",
+
+            //内存检测
+            "leakcanary-android"           : "com.squareup.leakcanary:leakcanary-android:1.6.3",
+            "leakcanary-android-no-op"     : "com.squareup.leakcanary:leakcanary-android-no-op:1.5.4",
+
+            //吐司库
+            "toast"                        : "com.hjq:toast:8.0",
+            //今日头条兼容适配方案
+            "autosize"                     : "me.jessyan:autosize:1.2.1",
+            //运行时权限
+            "easypermissions"              : "pub.devrel:easypermissions:1.2.0",
+
     ]
 
 
