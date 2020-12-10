@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/llGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_dialog_self"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="提示" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text=""
+            android:textColor="@color/color_33"
+            android:textSize="@dimen/font_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:gravity="center">
+
+            <com.coorchice.library.SuperTextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="30dp"
+                android:text="@string/i_know"
+                android:textColor="@color/color_22"
+                app:stv_corner="16dp"
+                android:visibility="gone"
+                app:stv_shaderEnable="true"
+                app:stv_shaderEndColor="@color/color_d8"
+                app:stv_shaderStartColor="@color/color_d8" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <com.coorchice.library.SuperTextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="30dp"
+                android:text="@string/i_know"
+                android:textColor="@color/white"
+                app:stv_corner="16dp"
+                android:visibility="gone"
+                app:stv_shaderEnable="true"
+                app:stv_shaderEndColor="@color/color_7894FF"
+                app:stv_shaderStartColor="@color/color_7894FF" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

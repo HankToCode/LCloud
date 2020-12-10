@@ -9,12 +9,17 @@
     <color name="text_main_color">#FFFFFF</color>
     <color name="text_assistant_color">#FFFFFF</color>
 
-    <color name="color_999999">#999999</color>
-    <color name="color_fff27f4d">#fff27f4d</color>
-    <color name="color_ffef4327">#ffef4327</color>
-    <color name="color_44ef4327">#44ef4327</color>
-    <color name="color_44f27f4d">#44f27f4d</color>
-    <color name="color_222222">#222222</color>
+    <color name="color999999">#999999</color>
+    <color name="colorFFF27F4D">#fff27f4d</color>
+    <color name="colorFFEF4327">#ffef4327</color>
+    <color name="color44EF4327">#44ef4327</color>
+    <color name="color44F27F4D">#44f27f4d</color>
+    <color name="color222222">#222222</color>
+    <color name="colorE2231A">#E2231A</color>
+    <color name="colorEAEAEA">#EAEAEA</color>
+    <color name="colorF8F8F8">#f8f8f8</color>
+    <color name="colorFEFFFF">#fffeffff</color>
+    <color name="colorE2E2E2">#e2e2e2</color>
 
 
 </resources>

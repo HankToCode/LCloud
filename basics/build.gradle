@@ -100,4 +100,7 @@ dependencies {
     //运行时权限
     api(rootProject.ext.dependencies["easypermissions"])
 
+    //SuperTextView
+    api(rootProject.ext.dependencies["SuperTextView"])
+
 }

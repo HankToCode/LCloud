@@ -29,8 +29,13 @@
     <dimen name="layout_title_height">44dp</dimen>
     <dimen name="layout_title_padding_start">10dp</dimen>
     <dimen name="layout_title_padding_end">10dp</dimen>
-
-
+    <dimen name="common_title_height">44dp</dimen>
+    <dimen name="home_icon_drawable_padding">4dp</dimen>
+    <dimen name="home_text_item_width">76dp</dimen>
+    <dimen name="me_margin_line_left">48dp</dimen>
+    <dimen name="me_margin_line_right">10dp</dimen>
+    <dimen name="me_margin_text_left">10dp</dimen>
+    <dimen name="super_common_height">44dp</dimen>
 
 
 </resources>

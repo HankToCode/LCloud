@@ -117,6 +117,8 @@ ext {
             "autosize"                     : "me.jessyan:autosize:1.2.1",
             //运行时权限
             "easypermissions"              : "pub.devrel:easypermissions:1.2.0",
+            //SuperTextView
+            "SuperTextView"                : "com.github.chenBingX:SuperTextView:3.2.5"
 
     ]
 
