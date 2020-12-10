@@ -3,7 +3,11 @@ package com.app.cloud.ui.login.activity
 import android.annotation.SuppressLint
 import com.app.basics.base.BaseActivity
 import com.app.cloud.R
+import com.app.cloud.ex.clicksJustSeconds
 import com.app.cloud.mvp.presenter.TradingCenterPresenter
+import com.app.cloud.ui.main.activity.MainActivity
+import com.qmuiteam.qmui.util.QMUIStatusBarHelper
+import kotlinx.android.synthetic.main.activity_login.*
 
 /**
  * Created by HankGreen on 2020/3/20.
@@ -21,7 +25,13 @@ class LoginActivity : BaseActivity() {
     @SuppressLint("SetTextI18n")
     override fun initView() {
 
+        QMUIStatusBarHelper.setStatusBarLightMode(this)
 
+
+        tvLogin.isEnabled = true
+        clicksJustSeconds(tvLogin) {
+            MainActivity.startActivity(this)
+        }
     }
 
     override fun start() {

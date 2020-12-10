@@ -6,9 +6,9 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
 import android.view.WindowManager
-import com.trading.basics.ex.setVisibleOrGone
-import com.trading.otc.R
-import kotlinx.android.synthetic.main.dialog_market_place_tips2.*
+import com.app.cloud.R
+import com.app.cloud.ex.setVisibleOrGone
+import kotlinx.android.synthetic.main.dialog_common_tips.*
 
 /**
  * @Date 2020/11/12
@@ -29,7 +29,7 @@ class CommonTipsDialog(context: Context) : Dialog(context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.dialog_market_place_tips2)
+        setContentView(R.layout.dialog_common_tips)
         window?.apply {
             this.attributes.width = WindowManager.LayoutParams.MATCH_PARENT
             this.setGravity(Gravity.CENTER)

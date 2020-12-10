@@ -2,30 +2,24 @@ package com.app.cloud.ex
 
 import android.app.Activity
 import android.os.Build
-import android.support.annotation.ColorRes
-import android.support.annotation.DrawableRes
-import android.support.v4.content.ContextCompat
-import android.text.Editable
 import android.text.InputType
-import android.text.TextWatcher
-import android.text.method.KeyListener
 import android.util.Log
-import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
+import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
+import com.app.basics.glide.GlideApp
+import com.app.basics.utils.ConvertUtil
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
-import com.trading.basics.glide.GlideApp
-import com.trading.basics.utils.ConvertUtil
-import com.trading.basics.utils.LoadDialogUtil
-import com.trading.basics.utils.LogUtils
 
 
 /**
@@ -107,7 +101,8 @@ fun ImageView.loadImageRound(url: String?, dp: Float, error: Int = 0, placeholde
         }
     }
     val drawableCrossFadeFactory = DrawableCrossFadeFactory.Builder(300).setCrossFadeEnabled(true).build()
-    GlideApp.with(this).load(imageUrl).fitCenter().apply(RequestOptions.bitmapTransform(RoundedCorners(ConvertUtil.dp2px(dp))).apply {
+    GlideApp.with(this).load(imageUrl).fitCenter().apply(RequestOptions.bitmapTransform(RoundedCorners(
+        ConvertUtil.dp2px(dp))).apply {
         if (error != 0) {
             this.error(0)
         }

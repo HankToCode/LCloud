@@ -9,18 +9,16 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.media.MediaMetadataRetriever
-import android.support.v4.content.FileProvider
 import android.text.Editable
 import android.text.TextUtils
+import android.util.Log
 import android.util.TypedValue
+import androidx.core.content.FileProvider
 import com.blankj.utilcode.util.SPUtils
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.hjq.toast.ToastUtils
 import com.lcw.library.imagepicker.provider.ImagePickerProvider
-import com.trading.basics.bus.RxBus
-import com.trading.basics.constant.Constants
-import com.trading.basics.event.FinishEvent
-import com.trading.basics.event.MainSwitchEvent
 import java.io.File
 import java.util.*
 import kotlin.collections.ArrayList
@@ -139,7 +137,7 @@ class Util private constructor() {
                         arrayList.add(imgUrl)
                     }
                 } catch (e: Exception) {
-                    LogUtils.e("reorganizationString2Arraylist", e.message)
+                    Log.e("reorganization", e.message)
                 }
             }
             return arrayList
@@ -181,13 +179,7 @@ class Util private constructor() {
          */
         fun signOut(context: Context, intent: Intent?) {
             //清除用户信息,本地保存的用户设置信息
-            SPUtils.getInstance().remove(Constants.SP_USER)
-            SPUtils.getInstance().remove(Constants.FAKE_TOKEN)
-            SPUtils.getInstance().remove(Constants.SP_LOCAL_NOTICE_SETTING)
-            SPUtils.getInstance().remove(Constants.SP_LOCAL_OSS_INFO)
-            //首页TAB切换为置换中心
-            RxBus.default.post(MainSwitchEvent(MainSwitchEvent.POSITION_TRAd))
-            RxBus.default.post(FinishEvent(FinishEvent.CODE_LOGIN_OUT))
+
             //intent。context不为空则启动intent
             intent?.apply {
                 context.startActivity(intent)
@@ -273,7 +265,7 @@ class Util private constructor() {
             if (clipboardManager.hasPrimaryClip()) {
                 clipboardManager.primaryClip?.getItemAt(0)?.text
             }
-            ToastUtil.show("复制成功")
+            ToastUtils.show("复制成功")
         }
 
 

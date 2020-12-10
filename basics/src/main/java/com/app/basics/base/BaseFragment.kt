@@ -20,7 +20,7 @@ import com.trello.rxlifecycle3.components.RxFragment
     /**
      * 视图是否加载完毕
      */
-    private var isViewPrepare = false
+    protected var isViewPrepare = false
     /**
      * 数据是否加载过了
      */
