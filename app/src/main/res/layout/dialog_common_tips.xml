@@ -86,6 +86,7 @@
                 app:stv_corner="16dp"
                 android:visibility="gone"
                 app:stv_shaderEnable="true"
+                app:stv_shaderMode="leftToRight"
                 app:stv_shaderEndColor="@color/colorEF4327"
                 app:stv_shaderStartColor="@color/colorF27F4D" />
 

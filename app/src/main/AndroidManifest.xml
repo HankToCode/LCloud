@@ -60,6 +60,14 @@
 
         </activity>
 
+        <!-- 发送 -->
+        <activity
+            android:name=".ui.send.activity.SendingActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

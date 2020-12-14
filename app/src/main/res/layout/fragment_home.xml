@@ -9,6 +9,7 @@
     <com.app.cloud.view.CommonTitleView
         android:id="@+id/llCommonTitle"
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="wrap_content" />
 
     <androidx.core.widget.NestedScrollView
@@ -72,7 +73,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@mipmap/home_bg_hair_band"
+                    android:background="@mipmap/home_bg_send_band"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
                     android:padding="9dp">
@@ -81,14 +82,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
-                        android:text="@string/no_hair_band"
+                        android:text="@string/no_send_band"
                         android:textColor="@color/white"
                         android:textSize="@dimen/font_14" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/no_hair_band_desc"
+                        android:text="@string/no_send_band_desc"
                         android:textColor="@color/white"
                         android:textSize="@dimen/font_10" />
 
@@ -464,7 +465,7 @@
                         android:drawableTop="@mipmap/home_icon_collection"
                         android:drawablePadding="@dimen/home_icon_drawable_padding"
                         android:gravity="center"
-                        android:text="@string/collection_group_hair"
+                        android:text="@string/collection_group_send"
                         android:textColor="@color/color222222"
                         android:textSize="@dimen/font_12" />
 

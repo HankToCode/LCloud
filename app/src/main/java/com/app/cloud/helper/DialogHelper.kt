@@ -25,8 +25,10 @@ class DialogHelper {
          * @param noCallback 左边按钮点击回调
          * @param yesCallBack 右边按钮点击回调
          */
-        fun showCommonTipsDialog(context: Context, titleStr: String, errorMsg: String, noStr: String?,
-                             yesStr: String, noCallback: (() -> Unit)?, yesCallBack: (() -> Unit)) {
+        fun showCommonTipsDialog(
+            context: Context, titleStr: String, msg: String, noStr: String?,
+            yesStr: String, noCallback: (() -> Unit)?, yesCallBack: (() -> Unit)
+        ) {
             //不是前台不展示
             if (!Util.isForeground(context)) {
                 return
@@ -34,7 +36,7 @@ class DialogHelper {
 
             val marketPlaceTips2Dialog = CommonTipsDialog(context)
             marketPlaceTips2Dialog.title = titleStr
-            marketPlaceTips2Dialog.message = errorMsg
+            marketPlaceTips2Dialog.message = msg
             marketPlaceTips2Dialog.confirmStr = yesStr
             marketPlaceTips2Dialog.cancelStr = noStr
             marketPlaceTips2Dialog.cancelCallback = noCallback

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF8F8F8"
+    android:orientation="vertical">
+
+    <com.app.cloud.view.CommonTitleView
+        android:id="@+id/llCommonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:icon_back="@mipmap/common_icon_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sending_spacing">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/sending_spacing_26"
+                    android:text="@string/title"
+                    android:textColor="@color/color222222"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etContent"
+                    style="@style/ETTheme"
+                    android:hint="@string/title_hint"
+                    android:padding="6dp"
+                    android:text=""
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/sending_spacing"
+                android:background="@color/colorF8F8F8"
+                android:paddingEnd="@dimen/sending_spacing" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sending_spacing"
+                android:text="@string/content"
+                android:textColor="@color/color222222"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sending_spacing"
+                android:layout_marginEnd="@dimen/sending_spacing"
+                android:background="@drawable/bg_sending_content">
+
+                <EditText
+                    style="@style/ETTheme"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/sending_spacing_26"
+                    android:layout_marginBottom="34dp"
+                    android:gravity="left|top"
+                    android:hint="@string/sending_content_hint"
+                    android:minHeight="72dp" />
+
+                <ImageView
+                    android:id="@+id/ivExpression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@mipmap/mass_icon_expression" />
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@mipmap/mass_icon_delete" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sending_spacing"
+                android:layout_marginTop="@dimen/sending_spacing_26">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/tvPhotoLine"
+                        android:layout_width="32dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/color22E2231A" />
+
+                    <TextView
+                        android:id="@+id/tvPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="@string/photo"
+                        android:textColor="@drawable/selector_33_and_66_text_color" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp">
+
+                    <View
+                        android:id="@+id/tvVideoLine"
+                        android:layout_width="32dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/color22E2231A"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="@string/video"
+                        android:textColor="@drawable/selector_33_and_66_text_color" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="13dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="26dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sending_spacing">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="可见对象"
+                    android:textColor="@color/color222222" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/mass_icon_forward"
+                    android:drawablePadding="5dp"
+                    android:text="全部好友"
+                    android:textColor="@color/color222222" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/sending_spacing"
+                android:background="@color/colorF8F8F8"
+                android:paddingEnd="@dimen/sending_spacing" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sending_spacing">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="开始时间"
+                    android:textColor="@color/color222222" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/mass_icon_forward"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/color222222"
+                    tools:text="全部好友" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="28dp"
+                android:background="@drawable/selector_orange_and_gray"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

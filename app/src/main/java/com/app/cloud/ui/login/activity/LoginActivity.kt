@@ -5,7 +5,7 @@ import com.app.basics.base.BaseActivity
 import com.app.cloud.R
 import com.app.cloud.ex.clicksJustSeconds
 import com.app.cloud.mvp.presenter.TradingCenterPresenter
-import com.app.cloud.ui.main.activity.MainActivity
+import com.app.cloud.ui.send.activity.SendingActivity
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -30,7 +30,7 @@ class LoginActivity : BaseActivity() {
 
         tvLogin.isEnabled = true
         clicksJustSeconds(tvLogin) {
-            MainActivity.startActivity(this)
+            SendingActivity.startActivity(this)
         }
     }
 

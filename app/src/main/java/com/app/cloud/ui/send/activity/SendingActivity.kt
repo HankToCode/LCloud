@@ -1,4 +1,4 @@
-package com.app.cloud.ui.main.activity
+package com.app.cloud.ui.send.activity
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -8,7 +8,6 @@ import com.app.cloud.R
 import com.app.cloud.mvp.model.bean.MainTabBean
 import com.app.cloud.mvp.presenter.TradingCenterPresenter
 import com.app.cloud.ui.main.adapter.MainFragmentAdapter
-import com.app.cloud.ui.send.activity.SendingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -16,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  * desc: 首页
  * Tips:onDestroy() 记得mPresenter.detachView()
  */
-class MainActivity : BaseActivity() {
+class SendingActivity : BaseActivity() {
     override fun layoutId(): Int = R.layout.activity_main
 
     private val mPresenter by lazy { TradingCenterPresenter() }
