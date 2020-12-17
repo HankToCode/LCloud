@@ -44,6 +44,7 @@ class RegularSendingActivity : BaseActivity() {
         mFragments?.add(RegularSendingFragment.newInstance(1))
         mFragments?.add(RegularSendingFragment.newInstance(2))
 
+        mViewPager.offscreenPageLimit = 3
         mViewPager.adapter = CommonPagerAdapter(this.supportFragmentManager, mFragments)
         mViewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
