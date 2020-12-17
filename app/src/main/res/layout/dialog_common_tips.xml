@@ -79,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:foreground="?attr/selectableItemBackground"
                 android:minWidth="120dp"
                 android:minHeight="30dp"
                 android:text="@string/confirm"

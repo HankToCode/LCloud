@@ -11,11 +11,11 @@
 
     <style name="OrangeButtonStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/selector_orange_and_gray</item>
-        <item name="android:textColor">@drawable/selector_white_and_gray_text_color</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/selector_bg_orange_and_gray</item>
+        <item name="android:textColor">@drawable/selector_text_color_white_and_gray</item>
+        <item name="android:textSize">@dimen/font_18</item>
     </style>
 
     <!--全局输入框基础样式-->
@@ -26,7 +26,6 @@
         <item name="android:textColorHint">@color/color999999</item>
         <item name="android:textSize">@dimen/font_14</item>
     </style>
-
 
 
 </resources>

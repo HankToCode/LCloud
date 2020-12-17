@@ -24,13 +24,13 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
     /**
      * RX订阅者处理类
      */
-    var rxSubscriptions: RxSubscriptions? = null
+    private var rxSubscriptions: RxSubscriptions? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         QMUIStatusBarHelper.translucent(this)
-        QMUIStatusBarHelper.setStatusBarDarkMode(this)
+        QMUIStatusBarHelper.setStatusBarLightMode(this)
         setContentView(layoutId())
 
         AppManager.appManager?.addActivity(this)
@@ -41,11 +41,6 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
         start()
 
 
-    }
-
-
-    open val mRetryClickListener: View.OnClickListener = View.OnClickListener {
-        start()
     }
 
     /**

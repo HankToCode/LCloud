@@ -15,7 +15,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorF8F8F8">
+        android:background="@color/bg_color">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@mipmap/home_bg_send_band"
+                    android:background="@mipmap/home_bg_hair_band"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
                     android:padding="9dp">

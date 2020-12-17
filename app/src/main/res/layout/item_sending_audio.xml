@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_gradient_sending"
+        android:gravity="center"
+        android:paddingStart="6dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/ivAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/shape_radio_icon" />
+
+        <TextView
+            android:id="@+id/tvAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长按添加语音"
+            android:textColor="@drawable/selector_text_color_white_and_gray2" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

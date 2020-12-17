@@ -59,9 +59,9 @@ class CommonTitleView : LinearLayout {
         ivBack = view.findViewById(R.id.ivBack)
 
         ta?.apply {
-            val iconBack = getInteger(R.styleable.CommonTitleView_icon_back, 0)
-            if (iconBack != 0) {
-                ivBack.setImageResource(iconBack)
+            val iconBack = getDrawable(R.styleable.CommonTitleView_icon_back)
+            if (iconBack != null) {
+                ivBack.setImageDrawable(iconBack)
             }
         }
 
@@ -95,8 +95,6 @@ class CommonTitleView : LinearLayout {
             }
         }
     }
-
-
 
 
 }

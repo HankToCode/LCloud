@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.NonNull
 import com.app.basics.Constants
+import com.app.basics.utils.StatusBarUtil
 import com.app.cloud.R
 import com.app.cloud.view.CommonTitleView
 import com.jakewharton.rxbinding2.view.RxView
@@ -31,6 +32,8 @@ fun RxAppCompatActivity.initToolbar(
 
     val llCommonTitle = this.findViewById<CommonTitleView>(R.id.llCommonTitle)
     val ivBack = llCommonTitle.findViewById<ImageView>(R.id.ivBack)
+
+    StatusBarUtil.setPadding(this, llCommonTitle)
 
     ivBack.setOnClickListener { onclick }
     title?.apply {

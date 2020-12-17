@@ -22,7 +22,6 @@ class HomeFragment : BaseFragment() {
 
         initToolbar(getString(R.string.app_name))
 
-        StatusBarUtil.setPadding(requireContext(), llCommonTitle)
 
     }
 

@@ -3,24 +3,26 @@ package com.app.cloud.ui.send.activity
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.util.TypedValue
 import com.app.basics.base.BaseActivity
 import com.app.cloud.R
-import com.app.cloud.mvp.model.bean.MainTabBean
+import com.app.cloud.ex.initToolbar
+import com.app.cloud.ex.setVisibleOrGone
+import com.app.cloud.mvp.model.bean.SendingTabBean
 import com.app.cloud.mvp.presenter.TradingCenterPresenter
-import com.app.cloud.ui.main.adapter.MainFragmentAdapter
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_sending.*
 
 /**
  * Created by HankGreen on 2020/3/20.
- * desc: 首页
+ * desc: 发送界面
  * Tips:onDestroy() 记得mPresenter.detachView()
  */
 class SendingActivity : BaseActivity() {
-    override fun layoutId(): Int = R.layout.activity_main
+    override fun layoutId(): Int = R.layout.activity_sending
 
     private val mPresenter by lazy { TradingCenterPresenter() }
 
-    var currentPosition = MainTabBean.TAB_HOME
+    private var currentPosition = SendingTabBean.TAB_IMAGE
 
     override fun initData() {
 
@@ -29,20 +31,19 @@ class SendingActivity : BaseActivity() {
     @SuppressLint("SetTextI18n")
     override fun initView() {
 
-        mViewPager.isLocked = true
-        mViewPager.offscreenPageLimit = 1
-        mViewPager.adapter = MainFragmentAdapter(supportFragmentManager)
-        llHome.setOnClickListener { setTabSelection(MainTabBean.TAB_HOME) }
-        llMe.setOnClickListener { setTabSelection(MainTabBean.TAB_ME) }
+        initToolbar("编辑朋友圈")
+
+        tvPhoto.setOnClickListener { setTabSelection(SendingTabBean.TAB_IMAGE) }
+        tvVideo.setOnClickListener { setTabSelection(SendingTabBean.TAB_VIDEO) }
 
         setTabSelection(currentPosition)
 
     }
 
     private fun setTabSelection(position: Int) {
-        mViewPager.setCurrentItem(position, false)
+
         currentPosition = position
-        //更改底部导航栏按钮状态
+        //更改头部导航栏按钮状态
         changeButtonState(currentPosition)
     }
 
@@ -52,15 +53,24 @@ class SendingActivity : BaseActivity() {
      */
     private fun changeButtonState(position: Int) {
         when (position) {
-            MainTabBean.TAB_HOME -> {
-                llHome.isSelected = true
-                llMe.isSelected = false
+            SendingTabBean.TAB_IMAGE -> {
+                tvPhoto.isSelected = true
+                tvVideo.isSelected = false
+
+                tvPhoto.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
+                tvVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
             }
-            MainTabBean.TAB_ME -> {
-                llHome.isSelected = false
-                llMe.isSelected = true
+            SendingTabBean.TAB_VIDEO -> {
+                tvPhoto.isSelected = false
+                tvVideo.isSelected = true
+
+                tvPhoto.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
+                tvVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
             }
         }
+
+        tvPhotoLine.setVisibleOrGone(tvPhoto.isSelected)
+        tvVideoLine.setVisibleOrGone(tvVideo.isSelected)
     }
 
     override fun start() {
