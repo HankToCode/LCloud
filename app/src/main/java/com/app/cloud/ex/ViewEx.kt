@@ -128,7 +128,7 @@ fun View.setVisibleOrGone(isVisible: Boolean) {
     this.visibility = if (isVisible) View.VISIBLE else View.GONE
 }
 
-fun View.setVisibleOrINVISIBLE(isVisible: Boolean) {
+fun View.setVisibleOrInvisible(isVisible: Boolean) {
     this.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
 }
 

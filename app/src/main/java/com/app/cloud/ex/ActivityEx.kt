@@ -3,16 +3,14 @@ package com.app.cloud.ex
 import android.annotation.SuppressLint
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.annotation.NonNull
-import com.app.basics.Constants
 import com.app.basics.utils.StatusBarUtil
+import com.app.basics.utils.constant.Constants
 import com.app.cloud.R
 import com.app.cloud.view.CommonTitleView
 import com.jakewharton.rxbinding2.view.RxView
 import com.trello.rxlifecycle3.android.ActivityEvent
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity
-import kotlinx.android.synthetic.main.layout_title.*
 import java.util.concurrent.TimeUnit
 
 /**
@@ -27,7 +25,7 @@ fun RxAppCompatActivity.initToolbar(
     title: String?,
     rightViews: MutableList<View>? = null,
     leftViews: MutableList<View>? = null,
-    onclick: View.OnClickListener = View.OnClickListener { finish() }
+    onclick: (() -> Unit)? = { finish() }
 ) {
 
     val llCommonTitle = this.findViewById<CommonTitleView>(R.id.llCommonTitle)
@@ -35,7 +33,7 @@ fun RxAppCompatActivity.initToolbar(
 
     StatusBarUtil.setPadding(this, llCommonTitle)
 
-    ivBack.setOnClickListener { onclick }
+    ivBack.setOnClickListener { onclick?.invoke() }
     title?.apply {
         llCommonTitle.tvTitle.text = title
     }

@@ -75,7 +75,7 @@ class MainActivity : BaseActivity() {
 
     companion object {
         fun startActivity(context: Context) {
-            context.startActivity(Intent(context, SendingActivity::class.java))
+            context.startActivity(Intent(context, MainActivity::class.java))
         }
     }
 }

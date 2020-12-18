@@ -52,6 +52,7 @@
     <color name="color_light_black">#5000</color>
 
     <color name="color333333">#333333</color>
+    <color name="transparency_65">#65000000</color>
 
 
 </resources>

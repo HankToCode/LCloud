@@ -2,14 +2,11 @@ package com.app.cloud.ui.send.fragment
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.app.basics.base.BaseFragment
 import com.app.basics.base.BaseRefreshFragment
 import com.app.cloud.R
 import com.app.cloud.ex.handleDatas
-import com.app.cloud.mvp.model.bean.BaseBean
 import com.app.cloud.mvp.model.bean.SendingTabBean
 import com.app.cloud.ui.send.adapter.RegularSendingAdapter
-import com.qmuiteam.qmui.util.QMUIStatusBarHelper
 import kotlinx.android.synthetic.main.fragment_regular_sending.*
 
 /**

@@ -103,4 +103,7 @@ dependencies {
     //SuperTextView
     api(rootProject.ext.dependencies["SuperTextView"])
 
+    //加载动画图案
+    api 'com.tuyenmonkey:mkloader:1.0.0'
+
 }

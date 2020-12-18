@@ -1,11 +1,9 @@
 package com.app.cloud.ui.main.fragment
 
 import com.app.basics.base.BaseFragment
-import com.app.basics.utils.StatusBarUtil
 import com.app.cloud.R
 import com.app.cloud.ex.initToolbar
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper
-import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
  * @author HankGreen.

@@ -5,9 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
-import androidx.fragment.app.Fragment
 import com.app.basics.MyApplication
-import com.trello.rxlifecycle3.components.RxFragment
+import com.trello.rxlifecycle3.components.support.RxFragment
 
 /**
  * @author HankGreen
@@ -15,7 +14,7 @@ import com.trello.rxlifecycle3.components.RxFragment
  * desc:
  */
 
- abstract class BaseFragment: Fragment(){
+ abstract class BaseFragment: RxFragment(){
 
     /**
      * 视图是否加载完毕

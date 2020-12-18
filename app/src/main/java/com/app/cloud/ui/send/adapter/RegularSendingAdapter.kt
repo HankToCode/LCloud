@@ -1,7 +1,6 @@
 package com.app.cloud.ui.send.adapter
 
 import com.app.cloud.R
-import com.app.cloud.mvp.model.bean.BaseBean
 import com.app.cloud.mvp.model.bean.SendingTabBean
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder

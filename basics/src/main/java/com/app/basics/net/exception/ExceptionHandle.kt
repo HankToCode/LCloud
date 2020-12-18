@@ -1,5 +1,6 @@
 package com.app.basics.net.exception
 
+import com.blankj.utilcode.util.LogUtils
 import com.google.gson.JsonParseException
 
 import org.json.JSONException
@@ -14,51 +15,50 @@ import java.text.ParseException
  * Created by HankGreen on 2017/12/5.
  * desc: 异常处理类
  */
-
 class ExceptionHandle {
 
-
     companion object {
-         var errorCode = ErrorStatus.UNKNOWN_ERROR
-         var errorMsg = "请求失败，请稍后重试"
+        var errorCode = ErrorStatus.UNKNOWN_ERROR
+        var errorMsg = "请求失败，请稍后重试"
 
-        fun handleException(e: Throwable): String {
-            e.printStackTrace()
+        fun handleException(e: Throwable): ApiException {
+//            e.printStackTrace()
             if (e is SocketTimeoutException) {//网络超时
-//                Logger.e("TAG", "网络连接异常: " + e.message)
-                errorMsg = "网络连接异常"
                 errorCode = ErrorStatus.NETWORK_ERROR
+                errorMsg = "网络连接超时"
             } else if (e is ConnectException) { //均视为网络错误
-//                Logger.e("TAG", "网络连接异常: " + e.message)
-                errorMsg = "网络连接异常"
                 errorCode = ErrorStatus.NETWORK_ERROR
+                errorMsg = "网络连接异常"
             } else if (e is JsonParseException
-                    || e is JSONException
-                    || e is ParseException) {   //均视为解析错误
-//                Logger.e("TAG", "数据解析异常: " + e.message)
+                || e is JSONException
+                || e is ParseException) {   //均视为解析错误
+                errorCode = ErrorStatus.SERVER_ERROR
                 errorMsg = "数据解析异常"
-                errorCode = ErrorStatus.SERVER_ERROR
             } else if (e is ApiException) {//服务器返回的错误信息
-                errorMsg = e.message.toString()
                 errorCode = ErrorStatus.SERVER_ERROR
+                errorMsg = e.errorMsg.toString()
+
+                errorMsg = ""
             } else if (e is UnknownHostException) {
-//                Logger.e("TAG", "网络连接异常: " + e.message)
-                errorMsg = "网络连接异常"
                 errorCode = ErrorStatus.NETWORK_ERROR
+                errorMsg = "网络连接异常"
             } else if (e is IllegalArgumentException) {
+                errorCode = ErrorStatus.NETWORK_ERROR
                 errorMsg = "参数错误"
-                errorCode = ErrorStatus.SERVER_ERROR
+            } else if (e is NetStatusException) {
+                errorCode = e.getErrorCode()
+                errorMsg = "加载失败，请检查网络"
             } else {//未知错误
                 try {
-//                    Logger.e("TAG", "错误: " + e.message)
+                    LogUtils.e("TAG", "错误: " + e.message)
                 } catch (e1: Exception) {
-//                    Logger.e("TAG", "未知错误Debug调试 ")
+                    LogUtils.e("TAG", "未知错误Debug调试 ")
                 }
-
-                errorMsg = "未知错误，可能抛锚了吧~"
                 errorCode = ErrorStatus.UNKNOWN_ERROR
+//                errorMsg = "未知错误"
+                errorMsg = "${e.message}"
             }
-            return errorMsg
+            return ApiException("$errorCode", errorMsg)
         }
 
     }

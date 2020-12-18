@@ -25,24 +25,24 @@ class DownLoadManager private constructor() {
     //下载
     fun load(downUrl: String?, callBack: ProgressCallBack<ResponseBody?>) {
         retrofit!!.create(ApiService::class.java)
-                .download(downUrl)
-                .subscribeOn(Schedulers.io()) //请求网络 在调度者的io线程
-                .observeOn(Schedulers.io()) //指定线程保存文件
-                .doOnNext { responseBody -> responseBody?.let { callBack.saveFile(it) } }
-                .observeOn(AndroidSchedulers.mainThread()) //在主线程中更新ui
-                .subscribe(DownLoadSubscriber(callBack))
+            .download(downUrl)
+            .subscribeOn(Schedulers.io()) //请求网络 在调度者的io线程
+            .observeOn(Schedulers.io()) //指定线程保存文件
+            .doOnNext { responseBody -> responseBody?.let { callBack.saveFile(it) } }
+            .observeOn(AndroidSchedulers.mainThread()) //在主线程中更新ui
+            .subscribe(DownLoadSubscriber(callBack))
     }
 
     private fun buildNetWork() {
         val okHttpClient = OkHttpClient.Builder()
-                .addInterceptor(ProgressInterceptor())
-                .connectTimeout(20, TimeUnit.SECONDS)
-                .build()
+            .addInterceptor(ProgressInterceptor())
+            .connectTimeout(20, TimeUnit.SECONDS)
+            .build()
         retrofit = Retrofit.Builder()
-                .client(okHttpClient)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .baseUrl(UrlConstant.BASE_URL)
-                .build()
+            .client(okHttpClient)
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .baseUrl(UrlConstant.CURRENT_DOMAIN.host)
+            .build()
     }
 
     private interface ApiService {

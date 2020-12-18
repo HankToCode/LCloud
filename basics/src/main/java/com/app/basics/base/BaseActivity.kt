@@ -1,10 +1,17 @@
 package com.app.basics.base
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.Toast
+import androidx.appcompat.widget.ContentFrameLayout
 import com.app.basics.MyApplication
+import com.app.basics.R
 import com.app.basics.bus.RxSubscriptions
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity
@@ -26,22 +33,53 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
      */
     private var rxSubscriptions: RxSubscriptions? = null
 
+    private var contentLayout: ContentFrameLayout? = null
+
+    private var loadingBar: View? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         QMUIStatusBarHelper.translucent(this)
         QMUIStatusBarHelper.setStatusBarLightMode(this)
-        setContentView(layoutId())
 
         AppManager.appManager?.addActivity(this)
         rxSubscriptions = RxSubscriptions()
 
+        this.setContentView(layoutId())
+
         initData()
         initView()
         start()
+    }
+
+    override fun setContentView(layoutResID: Int) {
+        contentLayout = findViewById(R.id.content)
+        val view = LayoutInflater.from(this).inflate(R.layout.common_activity_layout, contentLayout, true)
+
+        val contentView = LayoutInflater.from(this)
+            .inflate(layoutResID, contentLayout, false)
+        val ll: FrameLayout = view.findViewById(R.id.layout_content)
+        ll.addView(contentView)
+        loadingBar = View.inflate(this, R.layout.layout_loading_bar, null)
+        val params = FrameLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        params.gravity = Gravity.CENTER
+        loadingBar?.layoutParams = params
+        loadingBar?.visibility = View.GONE
+        ll.addView(loadingBar)
+
+        super.setContentView(view)
 
 
     }
+
+    /*override fun setContentView(customContentView: View?) {
+        contentLayout!!.removeAllViews()
+        contentLayout!!.addView(customContentView)
+    }*/
 
     /**
      *  加载布局
@@ -119,13 +157,30 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
         if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
             Toast.makeText(this, "已拒绝权限" + sb + "并不再询问", Toast.LENGTH_SHORT).show()
             AppSettingsDialog.Builder(this)
-                    .setRationale("此功能需要" + sb + "权限，否则无法正常使用，是否打开设置")
-                    .setPositiveButton("好")
-                    .setNegativeButton("不行")
-                    .build()
-                    .show()
+                .setRationale("此功能需要" + sb + "权限，否则无法正常使用，是否打开设置")
+                .setPositiveButton("好")
+                .setNegativeButton("不行")
+                .build()
+                .show()
         }
     }
+
+    fun getActivity(): Activity {
+        return this
+    }
+
+    fun showLoading() {
+        loadingBar?.apply {
+            visibility = View.VISIBLE
+        }
+    }
+
+    fun dismissLoading() {
+        loadingBar?.apply {
+            visibility = View.GONE
+        }
+    }
+
 
 }
 
