@@ -40,9 +40,26 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:padding="6dp"
+            android:visibility="gone"
             android:text=""
             android:textColor="@color/color333333"
             android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tvMessage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text=""
+            android:textColor="@color/color333333"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,8 +77,8 @@
                 android:minHeight="30dp"
                 android:text="@string/cancel"
                 android:textColor="@color/color333333"
-                app:stv_corner="16dp"
                 android:visibility="gone"
+                app:stv_corner="16dp"
                 app:stv_shaderEnable="true"
                 app:stv_shaderEndColor="@color/colorF5F5F5"
                 app:stv_shaderStartColor="@color/colorF5F5F5" />
@@ -69,26 +86,26 @@
             <View
                 android:id="@+id/view1"
                 android:layout_width="0dp"
-                android:visibility="gone"
                 android:layout_height="1dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:visibility="gone" />
 
             <com.coorchice.library.SuperTextView
                 android:id="@+id/tvConfirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
                 android:minWidth="120dp"
                 android:minHeight="30dp"
                 android:text="@string/confirm"
                 android:textColor="@color/white"
-                app:stv_corner="16dp"
                 android:visibility="gone"
+                app:stv_corner="16dp"
                 app:stv_shaderEnable="true"
-                app:stv_shaderMode="leftToRight"
                 app:stv_shaderEndColor="@color/colorEF4327"
+                app:stv_shaderMode="leftToRight"
                 app:stv_shaderStartColor="@color/colorF27F4D" />
 
         </LinearLayout>

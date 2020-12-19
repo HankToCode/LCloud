@@ -37,12 +37,16 @@ class CommonTipsDialog(context: Context) : Dialog(context) {
             this.setWindowAnimations(android.R.style.Animation_InputMethod)
         }
 
-        if (title?.isNotEmpty() == true) {
+        if (title?.isNotBlank() == true) {
             tvTitle.setVisibleOrGone(true)
             tvTitle.text = title
         }
 
+        val selectMessageMethod = title?.isNotBlank() == true && message?.isNotBlank() == true
+        tvMessage.setVisibleOrGone(selectMessageMethod)
+        tvMessage2.setVisibleOrGone(!selectMessageMethod)
         tvMessage.text = message
+        tvMessage2.text = message
 
         if (cancelStr?.isNotEmpty() == true) {
             tvCancel.setVisibleOrGone(true)

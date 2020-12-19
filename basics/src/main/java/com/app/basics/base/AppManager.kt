@@ -158,6 +158,18 @@ open class AppManager private constructor() {
         }
     }
 
+    fun logout(callback:()->Unit) {
+        var i = 0
+        val size = activityStack!!.size
+        while (i < size - 1) {
+            if (null != activityStack!![i]) {
+                finishActivity(activityStack!![i])
+            }
+            i++
+        }
+        callback.invoke()
+    }
+
     companion object {
         var activityStack: Stack<Activity>? = null
             private set

@@ -1,6 +1,8 @@
 package com.app.cloud.ui.login.activity
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
 import com.app.basics.base.BaseActivity
@@ -96,5 +98,11 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     override fun onDestroy() {
         super.onDestroy()
         mPresenter.detachView()
+    }
+
+    companion object {
+        fun startActivity(context: Context) {
+            context.startActivity(Intent(context, LoginActivity::class.java))
+        }
     }
 }

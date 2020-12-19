@@ -11,6 +11,7 @@ import com.app.cloud.view.CommonTitleView
 import com.jakewharton.rxbinding2.view.RxView
 import com.trello.rxlifecycle3.android.ActivityEvent
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity
+import com.trello.rxlifecycle3.components.support.RxFragment
 import java.util.concurrent.TimeUnit
 
 /**
@@ -58,4 +59,18 @@ fun RxAppCompatActivity.clicksJustSeconds(
         .compose(this.bindUntilEvent(ActivityEvent.DESTROY)).subscribe {
             callback.invoke()
         }
+}
+
+@SuppressLint("CheckResult")
+fun RxFragment.clicksJustSeconds(
+    @NonNull view: View,
+    callback: () -> Unit
+) {
+    if (this.requireActivity() is RxAppCompatActivity) {
+        RxView.clicks(view).throttleFirst(Constants.THROTTLE_SECONDS, TimeUnit.SECONDS)
+            .compose((this.requireActivity() as RxAppCompatActivity).bindUntilEvent(ActivityEvent.DESTROY))
+            .subscribe {
+                callback.invoke()
+            }
+    }
 }
