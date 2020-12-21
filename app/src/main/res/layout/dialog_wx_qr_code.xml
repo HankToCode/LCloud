@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/llGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_dialog_common_tips"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+
+        <ImageView
+            android:id="@+id/ivQrCode"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/qr_code_message"
+            android:textColor="@color/color222222" />
+
+        <TextView
+            android:id="@+id/tvCountdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/font_13"
+            tools:text="240s过期" />
+
+        <com.coorchice.library.SuperTextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingStart="18dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="5dp"
+            android:text="@string/save_qr_code"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:stv_corner="16dp"
+            app:stv_shaderEnable="true"
+            app:stv_shaderEndColor="@color/colorEF4327"
+            app:stv_shaderMode="leftToRight"
+            app:stv_shaderStartColor="@color/colorF27F4D" />
+
+    </LinearLayout>
+
+</FrameLayout>

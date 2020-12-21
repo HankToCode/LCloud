@@ -1,8 +1,10 @@
 package com.app.cloud.helper
 
 import android.content.Context
+import android.view.View
 import com.app.basics.utils.Util
 import com.app.cloud.view.CommonTipsDialog
+import com.app.cloud.view.WxQrCodeDialog
 
 /**
  * @author HankGreen.
@@ -41,6 +43,18 @@ class DialogHelper {
             marketPlaceTips2Dialog.cancelStr = noStr
             marketPlaceTips2Dialog.cancelCallback = noCallback
             marketPlaceTips2Dialog.confirmCallback = yesCallBack
+            marketPlaceTips2Dialog.show()
+        }
+
+        fun showQrCodeDialog(
+            context: Context, codeUrl: String, callback: ((view: View) -> Unit)
+        ) {
+            //不是前台不展示
+            if (!Util.isForeground(context)) {
+                return
+            }
+
+            val marketPlaceTips2Dialog = WxQrCodeDialog(context, codeUrl, callback)
             marketPlaceTips2Dialog.show()
         }
 

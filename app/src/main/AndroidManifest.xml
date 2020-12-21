@@ -74,6 +74,11 @@
             android:name=".ui.send.activity.RegularSendingActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
+        <!-- 微信号管理 -->
+        <activity
+            android:name=".ui.wx.activity.WxManagerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
 
 
     </application>

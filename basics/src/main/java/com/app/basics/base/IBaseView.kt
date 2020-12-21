@@ -15,4 +15,5 @@ interface IBaseView {
 
     fun dismissLoading()
 
+
 }

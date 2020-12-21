@@ -48,6 +48,11 @@ class CommonTipsDialog(context: Context) : Dialog(context) {
         tvMessage.text = message
         tvMessage2.text = message
 
+        if (message?.length ?: 0 > 10) {
+            tvMessage.gravity = Gravity.LEFT
+            tvMessage2.gravity = Gravity.LEFT
+        }
+
         if (cancelStr?.isNotEmpty() == true) {
             tvCancel.setVisibleOrGone(true)
             tvCancel.text = cancelStr

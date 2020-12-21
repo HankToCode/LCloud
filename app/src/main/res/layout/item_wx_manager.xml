@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginBottom="6dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        tools:visibility="visible"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="26dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/my_head_01_portrait" />
+
+        <TextView
+            android:id="@+id/tvWxName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/color222222"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivAvatar"
+            app:layout_constraintTop_toTopOf="@id/ivAvatar"
+            tools:text="包租婆（在线）" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/color222222"
+            android:textSize="@dimen/font_11"
+            app:layout_constraintStart_toStartOf="@id/tvWxName"
+            app:layout_constraintTop_toBottomOf="@id/tvWxName"
+            tools:text="剩余时长：1天，已用：100天" />
+
+        <com.coorchice.library.SuperTextView
+            android:id="@+id/tvChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="4dp"
+            android:text="立即充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivAvatar"
+            app:stv_corner="16dp"
+            app:stv_shaderEnable="true"
+            app:stv_shaderEndColor="@color/colorEF4327"
+            app:stv_shaderMode="leftToRight"
+            app:stv_shaderStartColor="@color/colorF27F4D" />
+
+        <TextView
+            android:id="@+id/tvReplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="更换账号"
+            android:textColor="@color/color555555"
+            android:textSize="@dimen/font_10"
+            app:layout_constraintEnd_toEndOf="@id/tvChange"
+            app:layout_constraintStart_toStartOf="@id/tvChange"
+            app:layout_constraintTop_toBottomOf="@id/tvChange" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="34dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/my_icon_add"
+
+            android:drawablePadding="4dp"
+            android:text="点击扫码绑定微信"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+

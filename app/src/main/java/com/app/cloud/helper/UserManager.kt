@@ -15,6 +15,7 @@ class UserManager {
 
         fun logout() {
             saveFakeToken("")
+            saveDeviceId("")
 
             AppManager.appManager?.logout {
                 val activity = AppManager.appManager!!.currentActivity()!!
@@ -35,6 +36,20 @@ class UserManager {
          */
         fun saveFakeToken(fakeToken: String) {
             SPUtils.getInstance().put(Constants.FAKE_TOKEN, fakeToken)
+        }
+
+        /**
+         * 保存Tokne
+         */
+        fun saveDeviceId(deviceId: String) {
+            SPUtils.getInstance().put(Constants.DEVICE_ID, deviceId)
+        }
+
+        /**
+         *获取Token
+         */
+        fun getDeviceId(): String {
+            return SPUtils.getInstance().getString(Constants.DEVICE_ID)
         }
 
 

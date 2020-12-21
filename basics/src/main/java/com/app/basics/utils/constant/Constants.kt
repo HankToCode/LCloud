@@ -37,6 +37,8 @@ class Constants private constructor() {
 
         //fake_token
         const val FAKE_TOKEN = "fake_token"
+        //device_id
+        const val DEVICE_ID = "device_id"
         //倒计时时间
         const val MAX_COUNT_TIME = 60L
         //更新延迟时间

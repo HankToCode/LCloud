@@ -6,6 +6,7 @@ import com.app.cloud.R
 import com.app.cloud.ex.clicksJustSeconds
 import com.app.cloud.helper.DialogHelper
 import com.app.cloud.helper.UserManager
+import com.app.cloud.ui.wx.activity.WxManagerActivity
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper
 import kotlinx.android.synthetic.main.fragment_me.*
 
@@ -35,6 +36,10 @@ class MeFragment : BaseFragment() {
                 "确认",
                 {},
                 { UserManager.logout() })
+        }
+
+        clicksJustSeconds(llBindWeChat) {
+            WxManagerActivity.startActivity(requireActivity())
         }
     }
 

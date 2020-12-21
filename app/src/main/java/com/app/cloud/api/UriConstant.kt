@@ -13,6 +13,8 @@ import java.io.Serializable
  */
 object UrlConstant{
     const val HEADER_JSON_TYPE = "Content-Type: application/json;charset=UTF-8"
+    const val HEADER_URL_ENCODED = "Content-Type: application/x-www-form-urlencoded"
+    const val HEADER_FORM_DATA = "Content-Type: multipart/form-data"
     const val HEADER_JSON_ACCEPT = "Accept: application/json"
 
     var CURRENT_DOMAIN = getCurrentHost()

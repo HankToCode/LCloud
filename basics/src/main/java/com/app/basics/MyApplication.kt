@@ -8,6 +8,10 @@ import android.util.Log
 import com.app.basics.utils.DisplayManager
 import com.app.basics.utils.Util
 import com.hjq.toast.ToastUtils
+import com.scwang.smartrefresh.layout.SmartRefreshLayout
+import com.scwang.smartrefresh.layout.constant.SpinnerStyle
+import com.scwang.smartrefresh.layout.footer.ClassicsFooter
+import com.scwang.smartrefresh.layout.header.ClassicsHeader
 import com.squareup.leakcanary.LeakCanary
 import com.squareup.leakcanary.RefWatcher
 import me.jessyan.autosize.AutoSizeConfig
@@ -65,6 +69,26 @@ class MyApplication : Application() {
         //自动适配，开启Fragment支持
         AutoSizeConfig.getInstance().isCustomFragment = true
 
+        initSmart()
+
+    }
+
+    /**
+     * 刷新组件
+     */
+    private fun initSmart() {
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator { context1, _ ->
+
+            ClassicsHeader(context1).setSpinnerStyle(
+                SpinnerStyle.Translate
+            )
+        }
+        //指定为经典Footer，默认是 BallPulseFooter
+        SmartRefreshLayout.setDefaultRefreshFooterCreator { context12, _ ->
+            ClassicsFooter(context12).setSpinnerStyle(
+                SpinnerStyle.Scale
+            )
+        }
     }
 
 
