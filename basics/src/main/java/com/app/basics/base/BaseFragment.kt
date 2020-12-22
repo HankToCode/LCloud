@@ -1,5 +1,6 @@
 package com.app.basics.base
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +15,7 @@ import com.trello.rxlifecycle3.components.support.RxFragment
  * desc:
  */
 
- abstract class BaseFragment: RxFragment(){
+abstract class BaseFragment : RxFragment() {
 
     /**
      * 视图是否加载完毕
@@ -25,8 +26,12 @@ import com.trello.rxlifecycle3.components.support.RxFragment
      */
     private var hasLoadData = false
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(getLayoutId(),null)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(getLayoutId(), null)
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
@@ -59,7 +64,7 @@ import com.trello.rxlifecycle3.components.support.RxFragment
      * 加载布局
      */
     @LayoutRes
-    abstract fun getLayoutId():Int
+    abstract fun getLayoutId(): Int
 
     /**
      * 初始化 ViewI
@@ -76,4 +81,16 @@ import com.trello.rxlifecycle3.components.support.RxFragment
         activity?.let { MyApplication.getRefWatcher(it)?.watch(activity) }
     }
 
+
+    fun getAppActivity(): Activity {
+        return requireActivity()
+    }
+
+    fun showLoading() {
+
+    }
+
+    fun dismissLoading() {
+
+    }
 }

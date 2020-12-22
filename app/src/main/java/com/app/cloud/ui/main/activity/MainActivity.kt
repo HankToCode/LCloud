@@ -6,9 +6,8 @@ import android.content.Intent
 import com.app.basics.base.BaseActivity
 import com.app.cloud.R
 import com.app.cloud.mvp.model.bean.MainTabBean
-import com.app.cloud.mvp.presenter.TradingCenterPresenter
+import com.app.cloud.mvp.presenter.RegularSendingPresenter
 import com.app.cloud.ui.main.adapter.MainFragmentAdapter
-import com.app.cloud.ui.send.activity.SendingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -19,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity() {
     override fun layoutId(): Int = R.layout.activity_main
 
-    private val mPresenter by lazy { TradingCenterPresenter() }
+    private val mPresenter by lazy { RegularSendingPresenter() }
 
     var currentPosition = MainTabBean.TAB_HOME
 

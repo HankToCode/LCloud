@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.basics.base.BaseRefreshActivity
 import com.app.cloud.R
+import com.app.cloud.ex.clicksJustSeconds
 import com.app.cloud.ex.handleDatas
 import com.app.cloud.ex.initToolbar
 import com.app.cloud.helper.DialogHelper
@@ -74,6 +75,11 @@ class WxManagerActivity : BaseRefreshActivity(), WxManagerContract.View {
         refreshLayout = mSmartRefreshLayout
         setSwipeLayout()
         refreshLayout?.setEnableLoadMore(false)
+
+        clicksJustSeconds(tvBindingTutorial) {
+            //TODO 阿明这里没有提供设计图和gif图
+            ToastUtils.show("阿明这里没有提供设计图和gif图")
+        }
 
     }
 

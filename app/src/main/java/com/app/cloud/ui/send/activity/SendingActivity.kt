@@ -9,7 +9,8 @@ import com.app.cloud.R
 import com.app.cloud.ex.initToolbar
 import com.app.cloud.ex.setVisibleOrGone
 import com.app.cloud.mvp.model.bean.SendingTabBean
-import com.app.cloud.mvp.presenter.TradingCenterPresenter
+import com.app.cloud.mvp.model.bean.WxMessageListBean
+import com.app.cloud.mvp.presenter.RegularSendingPresenter
 import kotlinx.android.synthetic.main.activity_sending.*
 
 /**
@@ -20,11 +21,19 @@ import kotlinx.android.synthetic.main.activity_sending.*
 class SendingActivity : BaseActivity() {
     override fun layoutId(): Int = R.layout.activity_sending
 
-    private val mPresenter by lazy { TradingCenterPresenter() }
+    private val mPresenter by lazy { RegularSendingPresenter() }
 
     private var currentPosition = SendingTabBean.TAB_IMAGE
 
+    private val bean by lazy {
+        if (intent.getSerializableExtra(INTENT_BEAN) != null) intent.getSerializableExtra(
+            INTENT_BEAN
+        ) as WxMessageListBean else null
+    }
+
     override fun initData() {
+
+
 
     }
 
@@ -37,6 +46,7 @@ class SendingActivity : BaseActivity() {
         tvVideo.setOnClickListener { setTabSelection(SendingTabBean.TAB_VIDEO) }
 
         setTabSelection(currentPosition)
+
 
     }
 
@@ -83,8 +93,12 @@ class SendingActivity : BaseActivity() {
     }
 
     companion object {
-        fun startActivity(context: Context) {
-            context.startActivity(Intent(context, SendingActivity::class.java))
+        private const val INTENT_BEAN = "bean"
+
+        fun startActivity(context: Context, bean: WxMessageListBean?) {
+            val intent = Intent(context, SendingActivity::class.java)
+            intent.putExtra(INTENT_BEAN, bean)
+            context.startActivity(intent)
         }
     }
 }

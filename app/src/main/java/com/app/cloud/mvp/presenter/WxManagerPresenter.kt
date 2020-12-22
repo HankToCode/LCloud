@@ -68,8 +68,8 @@ class WxManagerPresenter : BasePresenter<WxManagerContract.View>(), WxManagerCon
 
                 override fun onBusinessNext(data: BaseBean<String>) {
                     mRootView?.dismissLoading()
-                    DialogHelper.showQrCodeDialog(mRootView!!.getActivity(), data.data) {
-                        FileUtils.saveImage(mRootView!!.getActivity(), it)
+                    DialogHelper.showQrCodeDialog(mRootView!!.getAppActivity(), data.data) {
+                        FileUtils.saveImage(mRootView!!.getAppActivity(), it)
                         ToastUtils.show("二维码已保存至系统相册")
                     }
                 }

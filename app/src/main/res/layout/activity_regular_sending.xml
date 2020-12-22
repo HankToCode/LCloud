@@ -99,6 +99,17 @@
                 app:stv_shaderEndColor="@color/white"
                 app:stv_shaderStartColor="@color/white" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="请在手机端确认"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_10"
+                app:layout_constraintEnd_toEndOf="@id/tvLogin"
+                app:layout_constraintStart_toStartOf="@id/tvLogin"
+                app:layout_constraintTop_toBottomOf="@id/tvLogin" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -111,8 +122,8 @@
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/mViewPager"
                 android:layout_width="300dp"
-                android:layout_gravity="center"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:clipChildren="false" />
         </FrameLayout>
 

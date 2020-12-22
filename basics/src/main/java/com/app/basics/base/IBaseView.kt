@@ -9,7 +9,7 @@ import android.app.Activity
  */
 interface IBaseView {
 
-    fun getActivity(): Activity
+    fun getAppActivity(): Activity
 
     fun showLoading()
 

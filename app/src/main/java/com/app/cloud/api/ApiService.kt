@@ -84,11 +84,11 @@ interface ApiService {
     fun wxSend(@Body send: WxSendSend): Observable<BaseBean<String?>>
 
     /**
-     * 微信·发送消息
+     * 微信·查询消息
      */
     @Headers(UrlConstant.HEADER_JSON_TYPE, UrlConstant.HEADER_JSON_ACCEPT)
     @POST(Urls.WX_MESSAGE_LIST)
-    fun wxMessageList(@Body send: WxMessageListSend): Observable<BaseBean<WxMessageListBean>>
+    fun wxMessageList(@Body send: WxMessageListSend): Observable<BaseBean<List<WxMessageListBean>>>
 
     /**
      * 设备列表

@@ -60,11 +60,12 @@
                     app:layout_constraintTop_toBottomOf="@id/tvLab" />
 
                 <TextView
+                    android:id="@+id/tvBindingTutorial"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@mipmap/my_ioon_tutorial"
                     android:gravity="center"
-                    android:text="绑定教程"
+                    android:text="@string/binding_tutorial"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@id/tvAccountNum"
                     app:layout_constraintEnd_toEndOf="parent"

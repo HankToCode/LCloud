@@ -47,6 +47,7 @@
     <string name="video">视频</string>
     <string name="qr_code_message">使用微信是“扫一扫”扫码登录</string>
     <string name="save_qr_code">保存二维码</string>
+    <string name="binding_tutorial">绑定教程</string>
 
 
 </resources>

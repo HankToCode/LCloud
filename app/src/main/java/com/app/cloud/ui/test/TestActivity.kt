@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.core.widget.NestedScrollView
+import com.app.cloud.mvp.model.send.WxMessageListSend
 import com.app.cloud.ui.login.activity.LoginActivity
 import com.app.cloud.ui.main.activity.MainActivity
 import com.app.cloud.ui.send.activity.RegularSendingActivity
@@ -41,15 +42,12 @@ class TestActivity : RxAppCompatActivity() {
                     }
                 })
                 addView(Button(context).apply {
-                    text = "编辑朋友圈"
-                    setOnClickListener {
-                        SendingActivity.startActivity(this@TestActivity)
-                    }
-                })
-                addView(Button(context).apply {
                     text = "定时群发"
                     setOnClickListener {
-                        RegularSendingActivity.startActivity(this@TestActivity)
+                        RegularSendingActivity.startActivity(
+                            this@TestActivity,
+                            WxMessageListSend.TARGET_CHAT
+                        )
                     }
                 })
 

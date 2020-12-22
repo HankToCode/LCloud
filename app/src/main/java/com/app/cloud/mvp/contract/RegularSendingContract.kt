@@ -5,9 +5,9 @@ import com.app.basics.base.IPresenter
 
 /**
  * Created by HankGreen on 2017/11/25.
- * desc: 视频详情契约类
+ * desc:
  */
-interface TradingCenterContract {
+interface RegularSendingContract {
 
     interface View : IBaseView {
 

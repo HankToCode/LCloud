@@ -1,5 +1,7 @@
 package com.app.cloud.mvp.model.bean
 
+import java.io.Serializable
+
 /**
 {
 "id":0, 主键id
@@ -42,5 +44,17 @@ data class WxMessageListBean(
     val voiceLength: String,
     val voicePath: String,
     val voiceState: Int,
-    val wxId: String
-)
+    val wxId: String,
+    val title: String = "义昆这里没有给标题字段"
+) : Serializable {
+
+    fun getContentStateName(): String {
+        return when (contentState) {
+            0 -> "失败"
+            1 -> "成功"
+            2 -> "未发送"
+            else -> ""
+        }
+    }
+
+}

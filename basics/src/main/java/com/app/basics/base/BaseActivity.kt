@@ -165,7 +165,7 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
         }
     }
 
-    fun getActivity(): Activity {
+    fun getAppActivity(): Activity {
         return this
     }
 

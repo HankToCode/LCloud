@@ -31,7 +31,7 @@ class LoginPresenter : BasePresenter<LoginContract.View>(), LoginContract.Presen
                 override fun onBusinessNext(data: BaseBean<String>) {
                     mRootView?.dismissLoading()
                     UserManager.saveFakeToken(data.data)
-                    MainActivity.startActivity(mRootView!!.getActivity())
+                    MainActivity.startActivity(mRootView!!.getAppActivity())
                 }
             })
     }
