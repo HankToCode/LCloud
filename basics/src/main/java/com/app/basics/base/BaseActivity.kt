@@ -48,7 +48,6 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
 
         this.setContentView(layoutId())
 
-        initData()
         initView()
         start()
     }
@@ -85,11 +84,6 @@ abstract class BaseActivity : RxAppCompatActivity(), EasyPermissions.PermissionC
      *  加载布局
      */
     abstract fun layoutId(): Int
-
-    /**
-     * 初始化数据
-     */
-    abstract fun initData()
 
     /**
      * 初始化 View

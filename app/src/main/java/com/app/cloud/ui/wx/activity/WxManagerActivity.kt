@@ -32,10 +32,6 @@ class WxManagerActivity : BaseRefreshActivity(), WxManagerContract.View {
     private var adapter: WxManagerAdapter? = null
     private val mPresenter by lazy { WxManagerPresenter() }
 
-    override fun initData() {
-
-    }
-
     override fun initView() {
 
         initToolbar("微信号管理")

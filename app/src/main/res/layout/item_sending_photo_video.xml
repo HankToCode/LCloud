@@ -19,17 +19,27 @@
             android:src="@mipmap/mass_bg_photo" />
 
         <ImageView
+            android:id="@+id/ivVideoPlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:src="@mipmap/mass_01_icon_video"
             android:visibility="gone" />
 
+        <ImageView
+            android:id="@+id/ivSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:src="@drawable/selector_mass_sending" />
+
     </FrameLayout>
 
 
     <TextView
-        android:id="@+id/tvImage"
+        android:id="@+id/tvDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

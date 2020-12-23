@@ -48,6 +48,11 @@
     <string name="qr_code_message">使用微信是“扫一扫”扫码登录</string>
     <string name="save_qr_code">保存二维码</string>
     <string name="binding_tutorial">绑定教程</string>
-
+    <string name="view_video">查看音频</string>
+    <string name="permission_of_camera_and_write1">上传图片需要获取拍照及相册读写权限</string>
+    <string name="permission_of_camera_and_write2">上传视频需要获取拍照及相册读写权限</string>
+    <string name="video_selection">视频选择</string>
+    <string name="image_selection">图片选择</string>
+    <string name="upload_video_tip2">请上传30M内格式为.mov或.mp4的视频.</string>
 
 </resources>

@@ -36,6 +36,8 @@ class WxManagerAdapter :
                     setText(R.id.tvDesc, "剩余时长:${item.vipSurplus}天,已用：${useDay}天")
                 }
 
+                addOnClickListener(R.id.tvChange)
+
             }
         }
     }

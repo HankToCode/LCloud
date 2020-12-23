@@ -22,10 +22,6 @@ class MainActivity : BaseActivity() {
 
     var currentPosition = MainTabBean.TAB_HOME
 
-    override fun initData() {
-
-    }
-
     @SuppressLint("SetTextI18n")
     override fun initView() {
 

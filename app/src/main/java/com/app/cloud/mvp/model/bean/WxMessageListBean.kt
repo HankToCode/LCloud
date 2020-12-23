@@ -26,26 +26,27 @@ import java.io.Serializable
 }
  */
 data class WxMessageListBean(
-    val blackWxId: String,
-    val content: String,
-    val contentState: Int,
-    val createDate: String,
-    val delayTime: Int,
-    val deviceId: String,
-    val id: Int,
-    val imgPath: String,
-    val imgState: Int,
-    val sendTime: String,
-    val target: String,
-    val userId: Int,
-    val videoPath: String,
-    val videoState: Int,
-    val videoThumbPath: String,
-    val voiceLength: String,
-    val voicePath: String,
-    val voiceState: Int,
-    val wxId: String,
-    val title: String = "义昆这里没有给标题字段"
+    val blackWxId: String = "",
+    val content: String = "",
+    val contentState: Int = 0,
+    val createDate: String = "",
+    val delayTime: String = "",
+    val deviceId: String = "",
+    val id: String = "",
+    val imgPath: String = "",
+    val imgState: Int = 0,
+    val sendTime: String = "",
+    val target: String = "",
+    val userId: String = "",
+    val videoPath: String = "",
+    val videoState: Int = 0,
+    val videoThumbPath: String = "",
+    val voiceLength: String = "",
+    val voicePath: String = "",
+    val voiceState: Int = 0,
+    val wxId: String = "",
+    val title: String = "后端这里没有给标题字段",
+    var optMethod: Int = OPT_METHOD_ADD
 ) : Serializable {
 
     fun getContentStateName(): String {
@@ -55,6 +56,15 @@ data class WxMessageListBean(
             2 -> "未发送"
             else -> ""
         }
+    }
+
+    companion object {
+        //添加
+        const val OPT_METHOD_ADD = 0
+        //查看
+        const val OPT_METHOD_VIEW = 1
+        //修改
+        const val OPT_METHOD_EDIT = 2
     }
 
 }

@@ -30,9 +30,6 @@ class LoginActivity : BaseActivity(), LoginContract.View {
 
     private val mPresenter by lazy { LoginPresenter() }
 
-    override fun initData() {
-    }
-
     @SuppressLint("SetTextI18n")
     override fun initView() {
 

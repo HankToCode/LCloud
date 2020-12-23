@@ -1,6 +1,5 @@
 package com.app.cloud.ui.send.fragment
 
-import android.app.Activity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.basics.base.BaseRefreshFragment
@@ -8,13 +7,11 @@ import com.app.cloud.R
 import com.app.cloud.ex.handleDatas
 import com.app.cloud.helper.DialogHelper
 import com.app.cloud.mvp.contract.RegularSendingFragmentContract
-import com.app.cloud.mvp.model.bean.SendingTabBean
 import com.app.cloud.mvp.model.bean.WxMessageListBean
 import com.app.cloud.mvp.model.send.WxMessageListSend
 import com.app.cloud.mvp.presenter.RegularSendingFragmentPresenter
 import com.app.cloud.ui.send.activity.SendingActivity
 import com.app.cloud.ui.send.adapter.RegularSendingAdapter
-import com.hjq.toast.ToastUtils
 import kotlinx.android.synthetic.main.fragment_regular_sending.*
 
 /**
@@ -60,12 +57,13 @@ class RegularSendingFragment : BaseRefreshFragment(), RegularSendingFragmentCont
             when (view.id) {
                 R.id.tvButton1 -> {
 
-                    //TODO 义昆这里少了两个接口 1、判断当前订单状态 2、暂停修改中的任务状态
+                    //TODO 后端这里少了两个接口 1、判断当前订单状态 2、暂停修改中的任务状态
 
                     //查看 或 修改任务
                     SendingActivity.startActivity(
                         this@RegularSendingFragment.requireContext(),
-                        item
+                        item,
+                        target!!
                     )
 
                 }

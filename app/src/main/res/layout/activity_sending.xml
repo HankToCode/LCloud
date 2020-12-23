@@ -25,6 +25,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sending_spacing"
+                android:text=""
+                android:textColor="@color/color222222"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,7 +48,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/etContent"
+                    android:id="@+id/etTitle"
                     style="@style/ETTheme"
                     android:hint="@string/title_hint"
                     android:padding="6dp"
@@ -70,6 +79,7 @@
                 android:background="@drawable/bg_sending_content">
 
                 <EditText
+                    android:id="@+id/etContent"
                     style="@style/ETTheme"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="10dp"
@@ -107,8 +117,8 @@
 
                 <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
 
                     <View
                         android:id="@+id/tvPhotoLine"
@@ -121,8 +131,9 @@
                     <TextView
                         android:id="@+id/tvPhoto"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_gravity="bottom|end"
+                        android:gravity="bottom"
                         android:text="@string/photo"
                         android:textColor="@drawable/selector_text_color_33_and_66" />
 
@@ -145,8 +156,9 @@
                     <TextView
                         android:id="@+id/tvVideo"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_gravity="bottom|end"
+                        android:gravity="bottom"
                         android:text="@string/video"
                         android:textColor="@drawable/selector_text_color_33_and_66" />
 
@@ -163,7 +175,31 @@
                 android:paddingBottom="26dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview"
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvVoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sending_spacing"
+                android:text="@string/view_video"
+                android:textColor="@color/color222222"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="13dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerViewVoice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -182,6 +218,7 @@
                     android:textColor="@color/color222222" />
 
                 <TextView
+                    android:id="@+id/tvRange"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@mipmap/mass_icon_forward"
@@ -191,41 +228,88 @@
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginStart="@dimen/sending_spacing"
-                android:background="@color/bg_color"
-                android:paddingEnd="@dimen/sending_spacing" />
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llInterval"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/sending_spacing">
+                android:paddingStart="@dimen/sending_spacing"
+                android:paddingEnd="@dimen/sending_spacing"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_color"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="开始时间"
-                    android:textColor="@color/color222222" />
+                    android:paddingTop="@dimen/sending_spacing"
+                    android:paddingBottom="@dimen/sending_spacing"
+                    android:text="群发时间间隔"
+                    android:textColor="@color/color222222"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/tvInterval"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@mipmap/mass_icon_forward"
                     android:drawablePadding="5dp"
                     android:textColor="@color/color222222"
-                    tools:text="全部好友" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="0~5秒" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/sending_spacing"
+                android:paddingEnd="@dimen/sending_spacing">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_color"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/sending_spacing"
+                    android:paddingBottom="@dimen/sending_spacing"
+                    android:text="开始时间"
+                    android:textColor="@color/color222222"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/mass_icon_forward"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/color222222"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="时间日期" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/tvConfirm"
                 style="@style/OrangeButtonStyle"
                 android:layout_margin="28dp"
-                android:padding="10dp"
                 android:enabled="false"
+                android:padding="10dp"
                 android:text="@string/confirm"
                 android:textColor="@color/white"
                 android:textSize="18dp" />

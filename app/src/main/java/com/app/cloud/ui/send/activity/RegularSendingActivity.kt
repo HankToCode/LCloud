@@ -10,6 +10,7 @@ import com.app.basics.base.CommonPagerAdapter
 import com.app.cloud.R
 import com.app.cloud.ex.clicksJustSeconds
 import com.app.cloud.ex.initToolbar
+import com.app.cloud.mvp.model.bean.WxMessageListBean
 import com.app.cloud.mvp.model.send.WxMessageListSend
 import com.app.cloud.mvp.presenter.RegularSendingPresenter
 import com.app.cloud.ui.send.fragment.RegularSendingFragment
@@ -30,10 +31,6 @@ class RegularSendingActivity : BaseActivity() {
     private val mPresenter by lazy { RegularSendingPresenter() }
 
     private val target by lazy { intent.getStringExtra(INTENT_TARGET) }
-
-    override fun initData() {
-
-    }
 
     @SuppressLint("SetTextI18n")
     override fun initView() {
@@ -71,7 +68,7 @@ class RegularSendingActivity : BaseActivity() {
         changeCircle(1)
 
         clicksJustSeconds(tvCreate) {
-            SendingActivity.startActivity(this, null)
+            SendingActivity.startActivity(this, WxMessageListBean(), target)
         }
 
     }
