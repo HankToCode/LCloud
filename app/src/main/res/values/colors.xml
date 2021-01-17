@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 
+    <color name="layout_toolbar_title">@color/color222222</color>
+    <color name="main_view_line_color">#DDDDDD</color>
+    <color name="text_main_color">@color/color222222</color>
+    <color name="text_assistant_color">@color/color999999</color>
+    <color name="bg_color">@color/colorF8F8F8</color>
 
+    <color name="color999999">#999999</color>
+    <color name="colorFFF27F4D">#fff27f4d</color>
+    <color name="colorFFEF4327">#ffef4327</color>
+    <color name="color44EF4327">#44ef4327</color>
+    <color name="color44F27F4D">#44f27f4d</color>
+    <color name="color222222">#222222</color>
+    <color name="colorE2231A">#E2231A</color>
+    <color name="colorEAEAEA">#EAEAEA</color>
+    <color name="colorF8F8F8">#f8f8f8</color>
+    <color name="colorFEFFFF">#fffeffff</color>
+    <color name="colorE2E2E2">#e2e2e2</color>
+    <color name="color555555">#555555</color>
+    <color name="color22000000">#22000000</color>
+    <color name="colorEF4327">#EF4327</color>
+    <color name="colorF27F4D">#F27F4D</color>
+    <color name="colorF5F5F5">#F5F5F5</color>
+    <color name="color666666">#666666</color>
+    <color name="color22E2231A">#22e2231a</color>
+    <color name="colorD8D8D8">#d8d8d8</color>
+    <color name="colorD1D1D1">#D1D1D1</color>
+    <color name="colorE6352C">#E6352C</color>
+    <color name="colorFF4646">#FF4646</color>
 
 
 </resources>

@@ -1,2 +1,49 @@
 <resources>
+
+    <!-- ************************** 公共 字 体 start **************************************-->
+    <dimen name="font_40">40sp</dimen>
+    <dimen name="font_36">36sp</dimen>
+    <dimen name="font_30">30sp</dimen>
+    <dimen name="font_28">28sp</dimen>
+    <dimen name="font_24">24sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_13">13sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_11">11sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+    <!-- ************************** 公共 字 体 end **************************************-->
+
+    <!-- ************************** 公共间距 start **************************************-->
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <!-- ************************** 公共间距 end **************************************-->
+
+
+
+    <!-- 标题栏-->
+    <dimen name="layout_toolbar_height">44dp</dimen>
+    <dimen name="layout_title_height">44dp</dimen>
+    <dimen name="layout_title_padding_start">10dp</dimen>
+    <dimen name="layout_title_padding_end">10dp</dimen>
+    <dimen name="common_title_height">44dp</dimen>
+
+    <!-- 首页-->
+    <dimen name="home_icon_drawable_padding">4dp</dimen>
+    <dimen name="home_text_item_width">76dp</dimen>
+    <dimen name="me_margin_line_left">48dp</dimen>
+    <dimen name="me_margin_line_right">10dp</dimen>
+    <dimen name="me_margin_text_left">10dp</dimen>
+    <dimen name="super_common_height">44dp</dimen>
+
+    <!-- 群发-->
+    <dimen name="sending_spacing">12dp</dimen>
+    <dimen name="sending_spacing_26">26dp</dimen>
+    <dimen name="orange_button_corner">24dp</dimen>
+
+
 </resources>

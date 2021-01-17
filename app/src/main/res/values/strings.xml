@@ -1,4 +1,58 @@
 <resources>
 
-    
+    <string name="login_tip">输入您的账号密码</string>
+    <string name="login_account_tip">请输入账号</string>
+    <string name="please_enter_login_pwd">请输入您的密码</string>
+    <string name="login_str">登录</string>
+    <string name="regular_group_sending">定时群发</string>
+    <string name="regular_group_sending_desc">自定义模版，定时发送到指定用户</string>
+    <string name="network_expansion">人脉扩展</string>
+    <string name="no_send_band">不折叠发圈</string>
+    <string name="no_send_band_desc">自定义模板，发送不折叠朋友圈</string>
+    <string name="bill">云发单</string>
+    <string name="bill_desc">自动同步优惠信息至微信群</string>
+    <string name="function_development">（功能开发中，敬请期待）</string>
+    <string name="add_friends_in_group">群内加好友</string>
+    <string name="intelligent_greeting">智能打招呼</string>
+    <string name="add_people_to_address_book">通讯录加人</string>
+    <string name="select_features">精选功能</string>
+    <string name="people_nearby">附近的人</string>
+    <string name="like_comments">点赞评论</string>
+    <string name="forward_circle_of_friends">转发朋友圈</string>
+    <string name="clone_circle_of_friends">克隆朋友圈</string>
+    <string name="clear_your_firends">清理朋友圈</string>
+    <string name="delete_friends_in_batch">批量删除好友</string>
+    <string name="collection_group_send">收藏群发</string>
+    <string name="batch_read">批量已读</string>
+    <string name="batch_group_announcement">批量群公告</string>
+    <string name="auto_pass_validation">自动通过验证</string>
+    <string name="batch_watermarking">批量水印</string>
+    <string name="automatically_pull_group">自动拉人进群</string>
+    <string name="clean_phone">手机清理</string>
+    <string name="binding_wechat">绑定微信</string>
+    <string name="common_problem">常见问题</string>
+    <string name="business_cooperation">商务合作</string>
+    <string name="current_version">当前版本</string>
+    <string name="confirm_submission">确认提交</string>
+    <string name="log_out">退出登录</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+
+    <!-- 群发-->
+    <string name="title">标题</string>
+    <string name="title_hint">标题仅自己可见</string>
+    <string name="content">内容</string>
+    <string name="sending_content_hint">填写群发消息内容</string>
+    <string name="photo">图片</string>
+    <string name="video">视频</string>
+    <string name="qr_code_message">使用微信是“扫一扫”扫码登录</string>
+    <string name="save_qr_code">保存二维码</string>
+    <string name="binding_tutorial">绑定教程</string>
+    <string name="view_video">查看音频</string>
+    <string name="permission_of_camera_and_write1">上传图片需要获取拍照及相册读写权限</string>
+    <string name="permission_of_camera_and_write2">上传视频需要获取拍照及相册读写权限</string>
+    <string name="video_selection">视频选择</string>
+    <string name="image_selection">图片选择</string>
+    <string name="upload_video_tip2">请上传30M内格式为.mov或.mp4的视频.</string>
+
 </resources>

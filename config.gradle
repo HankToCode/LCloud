@@ -1,62 +1,126 @@
-ext{
+ext {
+
+    PROJECT_DEBUG = "true"
 
     android = [
-            compileSdkVersion: 27,
-            buildToolsVersion: "27.0.3",
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
             minSdkVersion    : 19,
-            targetSdkVersion : 27,
-            versionCode      : 6,
-            versionName      : "1.3.0"
+            targetSdkVersion : 28,
+            versionCode      : 10,
+            versionName      : "1.0.0",
     ]
 
-    dependVersion = [
-            androidSupportSdkVersion: "27.1.1",
-            retrofitSdkVersion      : "2.3.0",
-            glideSdkVersion         : "4.7.1",
-            rxJava                  : "2.1.5",
-            rxAndroid               : "2.0.1"
+    version = [
+            // App dependencies
+            supportLibraryVersion  : '1.0.2',
+            materialVersion        : '1.0.0',
+            constraintLayoutVersion: '2.0.0-alpha2',
+            recyclerViewVersion    : '1.0.0',
+            glideVersion           : '4.9.0',
+            gradleVersion          : '3.2.1',
+            gsonVersion            : '2.8.2',
+            kotlinVersion          : '1.3.50',
+            coroutines_version     : '1.1.1',
+            retrofit2Version       : '2.9.0',
+            rxandroid              : '2.1.1',
+            refreshVersion         : '1.1.2',
     ]
 
-    supportDeps = [
-            //--------  support  -------
-            supportv4               : "com.android.support:support-v4:$dependVersion.androidSupportSdkVersion",
-            appcompatv7             : "com.android.support:appcompat-v7:$dependVersion.androidSupportSdkVersion",
-            cardview                : "com.android.support:cardview-v7:$dependVersion.androidSupportSdkVersion",
-            design                  : "com.android.support:design:$dependVersion.androidSupportSdkVersion",
-            annotations             : "com.android.support:support-annotations:$dependVersion.androidSupportSdkVersion"
+    dependencies = [
+            "appcompat"                    : "androidx.appcompat:appcompat:${version["supportLibraryVersion"]}",
+            "constraintlayout"             : "androidx.constraintlayout:constraintlayout:${version["constraintLayoutVersion"]}",
+            "material"                     : "com.google.android.material:material:${version["materialVersion"]}",
+            "recyclerview"                 : "androidx.recyclerview:recyclerview:${version["recyclerViewVersion"]}",
+
+            "glide"                        : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+            "glide-compiler"               : "com.github.bumptech.glide:compiler:${version["glideVersion"]}",
+            "okhttp3-integration"          : "com.github.bumptech.glide:okhttp3-integration:${version["glideVersion"]}",
+            "glide-annotations"            : "com.github.bumptech.glide:annotations:${version["glideVersion"]}",
+
+            "gson"                         : "com.google.code.gson:gson:${version["gsonVersion"]}",
+            "kotlin-stdlib-jdk8"           : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${version["kotlinVersion"]}",
+            "kotlinx-coroutines-core"      : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${version["coroutines_version"]}",
+            "gradle"                       : "com.android.tools.build:gradle::${version["gradleVersion"]}",
+            "MagicIndicator"               : "com.github.hackware1993:MagicIndicator:1.6.0",
+
+            "okhttp"                       : 'com.squareup.okhttp3:okhttp:3.12.0',
+            "retrofit2"                    : "com.squareup.retrofit2:retrofit:${version["retrofit2Version"]}",
+            "converter-gson"               : "com.squareup.retrofit2:converter-gson:${version["retrofit2Version"]}",
+            "adapter-rxjava2"              : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofit2Version"]}",
+            "rxandroid"                    : "io.reactivex.rxjava2:rxandroid:${version["rxandroid"]}",
+            "rxpermissions"                : "com.github.tbruyelle:rxpermissions:0.10.2",
+            "qmui"                         : "com.qmuiteam:qmui:1.4.0",
+            "eventbus"                     : "org.greenrobot:eventbus:3.2.0",
+            "facebook_rebound"             : "com.facebook.rebound:rebound:0.3.8",
+            "tumblr_backboard"             : "com.tumblr:backboard:0.1.0",
+            "rxlifecycle-components"       : "com.trello.rxlifecycle3:rxlifecycle-components:3.0.0",
+            "rxbinding"                    : "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            "multidex"                     : "com.android.support:multidex:1.0.1",
+            "lifecycle-extensions"         : "androidx.lifecycle:lifecycle-extensions:2.2.0",
+            "lifecycle-runtime"            : "androidx.lifecycle:lifecycle-runtime:2.2.0",
+            //二维码
+            "bga-qrcode-zxing"             : "cn.bingoogolapple:bga-qrcode-zxing:1.3.6",
+            //圆形进度条
+            "circleprogress"               : "com.github.lzyzsd:circleprogress:1.2.1",
+            //微信
+            "weChat"                       : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
+            //刷新库
+            "SmartRefreshLayout"           : "com.scwang.smartrefresh:SmartRefreshLayout:${version["refreshVersion"]}",
+            "SmartRefreshHeader"           : "com.scwang.smartrefresh:SmartRefreshHeader:${version["refreshVersion"]}",
+            //知乎图片选择库
+            "matisse"                      : "com.zhihu.android:matisse:0.5.2-beta4",
+            //luban图片压缩
+            "Luban-turbo"                  : "top.zibin:Luban-turbo:1.0.0",
+            //Banner
+            "banner-androidx"              : "com.ms:Banner-androidx:2.3.16",
+            //Banner
+            "banner"                       : "com.youth.banner:banner:2.1.0",
+            "viewpager2"                   : "androidx.viewpager2:viewpager2:1.0.0",
+            "AndroidPicker"                : "com.contrarywind:Android-PickerView:4.1.6",
+            //Tencent
+            "crashreport_upgrade"          : "com.tencent.bugly:crashreport_upgrade:latest.release",
+            "bugly_nativecrashreport"      : "com.tencent.bugly:nativecrashreport:latest.release",
+            "tencent_tbssdk"               : "com.tencent.tbs.tbssdk:sdk:43939",
+            //Alibaba
+            "arouter-api"                  : "com.alibaba:arouter-api:1.4.1",
+            "arouter-compiler"             : "com.alibaba:arouter-compiler:1.2.2",
+            //
+            "flowlayout-lib"               : "com.hyman:flowlayout-lib:1.1.2",
+            "SwipeDelMenuLayout"           : "com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0",
+            "photoview"                    : "com.github.chrisbanes:PhotoView:2.3.0",
+            "blankj-utilcode"              : "com.blankj:utilcodex:1.29.0",
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40",
+            "Android-PickerView"           : 'com.contrarywind:Android-PickerView:4.1.9',
+            //图片选择器
+            "imagepicker"                  : "com.lcw.library:imagepicker:2.2.7",
+            //进度条
+            "RangeSeekBar"                 : "com.github.Jay-Goo:RangeSeekBar:v3.0.0",
+            //
+            "flexbox"                      : "com.google.android:flexbox:1.0.0",
+            //
+            "versionchecklib"              : "com.allenliu.versionchecklib:library:2.2.1",
+            //
+            "RoundCornerProgressBar"       : "com.akexorcist:RoundCornerProgressBar:2.0.3",
+            //奔溃拦截
+            "defense_crash"                : "com.tonystark.android:defense_crash:2.0.0",
+            //验证码/密码输入框
+            "SeparatedEditText"            : "com.github.WGwangguan:SeparatedEditText:1.2",
+
+            //内存检测
+            "leakcanary-android"           : "com.squareup.leakcanary:leakcanary-android:1.6.3",
+            "leakcanary-android-no-op"     : "com.squareup.leakcanary:leakcanary-android-no-op:1.5.4",
+
+            //吐司库
+            "toast"                        : "com.hjq:toast:8.0",
+            //今日头条兼容适配方案
+            "autosize"                     : "me.jessyan:autosize:1.2.1",
+            //运行时权限
+            "easypermissions"              : "pub.devrel:easypermissions:1.2.0",
+            //SuperTextView
+            "SuperTextView"                : "com.github.chenBingX:SuperTextView:3.2.5"
+
     ]
-
-
-    retrofit = [
-            //------ retrofit和RxJava ---------
-            retrofit                : "com.squareup.retrofit2:retrofit:$dependVersion.retrofitSdkVersion",
-            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$dependVersion.retrofitSdkVersion",
-            retrofitAdapterRxjava2  : "com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofitSdkVersion",
-            okhttp3LoggerInterceptor: 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-    ]
-
-    rxJava = [
-            rxJava                : "io.reactivex.rxjava2:rxjava:$dependVersion.rxJava",
-            rxAndroid             : "io.reactivex.rxjava2:rxandroid:$dependVersion.rxAndroid"
-    ]
-
-
-
-
-    glide = "com.github.bumptech.glide:glide:$dependVersion.glideSdkVersion"
-    glideCompiler = "com.github.bumptech.glide:compiler:$dependVersion.glideSdkVersion"
-    glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:$dependVersion.glideSdkVersion"
-
-
-    supportLibs = supportDeps.values()
-    networkLibs = retrofit.values()
-    rxJavaLibs = rxJava.values()
-    otherLibs = [glide]
-
-    // APT
-    annotationProcessorLibs =[glideCompiler]
-
-
 
 
 }

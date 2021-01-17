@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/bg_color"
+    android:clipChildren="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical">
+
+        <com.coorchice.library.SuperTextView
+            android:layout_width="6dp"
+            android:layout_height="14dp"
+            app:stv_corner="2dp"
+            app:stv_left_bottom_corner="true"
+            app:stv_left_top_corner="true"
+            android:layout_marginStart="2dp"
+            app:stv_shaderEnable="true"
+            app:stv_shaderEndColor="@color/colorE6352C"
+            app:stv_shaderStartColor="@color/colorE6352C" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/color222222"
+            android:textSize="@dimen/font_16"
+            tools:text="所有任务" />
+
+        <TextView
+            android:id="@+id/tvTitleNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/color666666"
+            android:textSize="@dimen/font_12"
+            tools:text="6条" />
+
+    </LinearLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>
